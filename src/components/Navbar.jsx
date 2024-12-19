@@ -174,11 +174,11 @@ const Navbar = () => {
 
       {/* Navigation Bar  */}
       <nav
-        className={`w-[90%] mx-auto flex items-center justify-between py-16 px-6 ${navbarColor} sticky z-20 ${
+        className={`w-[90%] mx-auto flex items-center justify-between py-12 px-6 ${navbarColor} sticky z-20 ${
           (isDropdownOpen || isMenu || isServiceOpen) && "bg-white"
         }`}
       >
-        <div className="flex items-center justify-center gap-6 text-lg font-medium">
+        <div className="flex items-center justify-center xl:gap-6 lg:gap-4 font-medium">
           <button onClick={handleMenuDropDown} className={`cursor-pointer`}>
             {isMenu ? (
               <CloseIcon className={`w-[40px] h-[40px] cursor-pointer`} />
@@ -189,7 +189,7 @@ const Navbar = () => {
 
           {/* Left Links  */}
           <div
-            className={`flex items-center justify-center gap-14 text-lg font-medium ${
+            className={`hidden lg:flex items-center justify-center xl:gap-14 lg:gap-5 xl:text-lg lg:text-md font-medium ${
               isMenu && "hidden"
             }`}
           >
@@ -225,9 +225,15 @@ const Navbar = () => {
             }
           />
         </Link>
-        {/* Right Side - Icons */}
-        <div className="flex items-center gap-6 text-lg font-bold tracking-wider">
-          <div className={`flex items-center gap-14  ${isMenu && "hidden"}`}>
+
+        {/* Right Side  */}
+        <div className="flex items-center xl:gap-6 lg:gap-4 md:gap-2 font-medium tracking-wider">
+          {/* Links  */}
+          <div
+            className={`lg:flex hidden items-center xl:gap-14 lg:gap-5 xl:text-lg lg:text-md ${
+              isMenu && "hidden"
+            }`}
+          >
             <a
               onClick={handleServiceClick}
               className={`hover:text-gray-400 cursor-pointer ${
@@ -240,6 +246,7 @@ const Navbar = () => {
               Boutiques
             </a>
           </div>
+          {/* User and watch Icon  */}
           <UserIcon
             className={
               isDropdownOpen || isMenu || isServiceOpen || isWorldOpen

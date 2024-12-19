@@ -11,7 +11,7 @@ const Loader = ({ isLoading, onComplete }) => {
     if (isLoading) {
       const interval = setInterval(() => {
         setProgress((prev) => (prev < 100 ? prev + 1 : 100));
-      }, 20);
+      }, 10);
 
       if (progress === 100) {
         clearInterval(interval);

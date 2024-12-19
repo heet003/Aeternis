@@ -93,7 +93,7 @@ const WatchesDropDown = () => {
         variants={fadeInOpacity(0.2, 1)}
         initial="hidden"
         whileInView="show"
-        className="text-6xl font-extralight text-center w-1/3 ml-56"
+        className="text-6xl xl:text-5xl lg:text-[2.5rem] font-extralight text-center w-1/3  ml-56"
       >
         Our <span className="italic collection">Collections</span>
       </motion.h1>
@@ -102,7 +102,7 @@ const WatchesDropDown = () => {
           variants={fadeInOpacity(0.7, 1)}
           initial="hidden"
           whileInView="show"
-          className="lg:w-1/6 text-center"
+          className="2xl:w-1/6 xl:w-1/6 lg:w-1/6 text-center"
         >
           <div className="flex flex-col gap-4 p-2 text-black">
             <motion.a
@@ -157,7 +157,7 @@ const WatchesDropDown = () => {
           variants={fadeInOpacity(0.2, 1)}
           initial="hidden"
           whileInView="show"
-          className="lg:w-5/6 p-2"
+          className="2xl:w-5/6 xl:w-5/6 lg:w-5/6  p-2"
         >
           <Slider {...settings}>
             {images.map((img, index) => (

@@ -90,7 +90,7 @@ const Services = () => {
         variants={fadeInOpacity(0.3, 1)}
         initial="hidden"
         whileInView="show"
-        className="text-6xl font-extralight text-center w-1/3 ml-60"
+        className="text-6xl xl:text-5xl lg:text-[2.5rem] font-extralight text-center w-1/3 ml-60"
       >
         OUR <span className="italic collection">SERVICES</span>
       </motion.p>

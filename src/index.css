@@ -26,19 +26,11 @@ body {
 }
 
 .translucent {
-  background-color: #7F7F7F;
-  backdrop-filter: blur(100px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: #00000058;
 }
 
 /* Hero Section  */
-.hero-div {
-  font-family: "Ubuntu", sans-serif;
-}
-
 .hero-div p {
-  font-size: 4rem;
-  margin-top: -40px;
   font-weight: 100;
 }
 

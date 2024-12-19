@@ -94,7 +94,7 @@ const OurWorld = () => {
         variants={fadeInOpacity(0.2, 1)}
         initial="hidden"
         whileInView="show"
-        className="text-6xl font-extralight text-center w-1/3 ml-60"
+        className="text-6xl xl:text-5xl lg:text-[2.5rem] font-extralight text-center w-1/3 ml-60"
       >
         WHO WE <span className="italic collection">ARE</span>
       </motion.p>
