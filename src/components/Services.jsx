@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { right, left } from "../assets";
 
-const OurWorld = () => {
+const Services = () => {
   const [showLeftArrow, setShowLeftArrow] = useState(false);
 
   const CustomRightArrow = ({ onClick }) => {
@@ -35,23 +35,19 @@ const OurWorld = () => {
   const images = [
     {
       url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDW_XJ1-pQd0Ym65-7oO7Qdm-RtEjS3eu3_Q&s",
-      name: "Hublot Spider Look",
+      name: "Hi-Care Programme",
     },
     {
       url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmFitS6dugoPnAjajc_djRW1K3440pvP-CjQ&s",
-      name: "Chronext Timepiece",
+      name: "Maintenance Services",
     },
     {
       url: "https://www.watchtime.com/wp-content/uploads/2018/03/l_big-bang-unico-red-magic-3.jpg",
-      name: "Kapoor Watch 821.OX",
+      name: "Caring for your watch",
     },
     {
       url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQC4PwOQ0BZgZ28Pqm1c_yQxMDkA_nweL1A&s",
-      name: "Luxury Timepiece",
-    },
-    {
-      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhFpPLXvrz03W_4L0gI7SEPsbDQrSlxAIKFA&s",
-      name: "Kapoor Watch 821.NX",
+      name: "After Sales Network",
     },
   ];
 
@@ -87,9 +83,9 @@ const OurWorld = () => {
 
   return (
     <>
-      <div className="p-28 pt-16 z-10"></div>
+      <div className="p-28 pt-20 z-10"></div>
       <p className="text-6xl font-extralight text-center w-1/3 ml-60">
-        WHO WE <span className="italic collection">ARE</span>
+        OUR <span className="italic collection">SERVICES</span>
       </p>
       <div className="flex flex-col lg:flex-row gap-8">
         <div className="lg:w-1/5 pl-10">
@@ -99,43 +95,37 @@ const OurWorld = () => {
               to="/"
               className="hover:text-gray-400 tracking-wider cursor-pointer"
             >
-              Born in Le Brassus
+              Hi-Care Programme
             </a>
             <a
               to="/"
               className="hover:text-gray-400 tracking-wider cursor-pointer"
             >
-              Savoir-Faire
+              Maintenance Services
             </a>
             <a
               to="/"
               className="hover:text-gray-400 tracking-wider cursor-pointer"
             >
-              AP x Art
+              Where to service
             </a>
             <a
               to="/"
               className="hover:text-gray-400 tracking-wider cursor-pointer"
             >
-              AP x Music
+              Extend your Warranty
             </a>
             <a
               to="/"
               className="hover:text-gray-400 tracking-wider cursor-pointer"
             >
-              Foundation
+              AP Coverage Service
             </a>
             <a
               to="/"
               className="hover:text-gray-400 tracking-wider cursor-pointer"
             >
-              Musée Atelier
-            </a>
-            <a
-              to="/"
-              className="hover:text-gray-400 tracking-wider cursor-pointer"
-            >
-              AP Chronicles
+              Repair pick up
             </a>
           </div>
         </div>
@@ -161,4 +151,4 @@ const OurWorld = () => {
   );
 };
 
-export default OurWorld;
+export default Services;

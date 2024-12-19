@@ -6,16 +6,19 @@ import WatchesDropDown from "./WatchesDropDown";
 import OurWorld from "./OurWorld";
 import { user } from "../assets";
 import MenuDropDown from "./menuDropDown";
+import Services from "./Services";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isWorldOpen, setIsWorldOpen] = useState(false);
+  const [isServiceOpen, setIsServiceOpen] = useState(false);
   const [isMenu, setIsMenu] = useState(false);
   const [navbarColor, setNavbarColor] = useState("text-white");
   const dropdownRef = useRef(null);
   const menuref = useRef(null);
   const worldref = useRef(null);
+  const serviceRef = useRef(null);
 
   const handleWatchesClick = () => {
     if (!isDropdownOpen) {
@@ -24,8 +27,9 @@ const Navbar = () => {
         { height: 0, opacity: 0 },
         { height: "auto", opacity: 1, duration: 0.5, ease: "power2.out" }
       );
-      setIsDropdownOpen(true);
       setIsWorldOpen(false);
+      setIsServiceOpen(false);
+      setIsDropdownOpen(true);
       setNavbarColor("text-black");
     } else {
       gsap.fromTo(
@@ -43,6 +47,33 @@ const Navbar = () => {
     }
   };
 
+  const handleServiceClick = () => {
+    if (!isServiceOpen) {
+      gsap.fromTo(
+        serviceRef.current,
+        { height: 0, opacity: 0 },
+        { height: "auto", opacity: 1, duration: 0.5, ease: "power2.out" }
+      );
+      setIsDropdownOpen(false);
+      setIsWorldOpen(false);
+      setIsServiceOpen(true);
+      setNavbarColor("text-black");
+    } else {
+      gsap.fromTo(
+        serviceRef.current,
+        { height: "auto", opacity: 1 },
+        {
+          height: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power2.out",
+        }
+      );
+      setIsServiceOpen(false);
+      setNavbarColor("text-white");
+    }
+  };
+
   const handleWorldClick = () => {
     if (!isWorldOpen) {
       gsap.fromTo(
@@ -50,8 +81,9 @@ const Navbar = () => {
         { height: 0, opacity: 0 },
         { height: "auto", opacity: 1, duration: 0.5, ease: "power2.out" }
       );
-      setIsWorldOpen(true);
       setIsDropdownOpen(false);
+      setIsServiceOpen(false);
+      setIsWorldOpen(true);
       setNavbarColor("text-black");
     } else {
       gsap.fromTo(
@@ -73,6 +105,7 @@ const Navbar = () => {
     if (!isMenu) {
       setIsDropdownOpen(false);
       setIsWorldOpen(false);
+      setIsServiceOpen(false);
       gsap.fromTo(
         menuref.current,
         { height: 0, opacity: 0 },
@@ -128,11 +161,21 @@ const Navbar = () => {
       >
         <OurWorld />
       </div>
+      {/* Service Menu  */}
+      <div
+        ref={serviceRef}
+        className={`absolute w-full bg-white text-black z-10 overflow-hidden ${
+          isServiceOpen ? "visible" : "invisible"
+        }`}
+        style={{ height: "0px" }}
+      >
+        <Services />
+      </div>
 
       {/* Navigation Bar  */}
       <nav
         className={`w-[90%] mx-auto flex items-center justify-between py-16 px-6 ${navbarColor} sticky z-20 ${
-          (isDropdownOpen || isMenu) && "bg-white"
+          (isDropdownOpen || isMenu || isServiceOpen) && "bg-white"
         }`}
       >
         <div className="flex items-center justify-center gap-6 text-lg font-medium">
@@ -144,6 +187,7 @@ const Navbar = () => {
             )}
           </button>
 
+          {/* Left Links  */}
           <div
             className={`flex items-center justify-center gap-14 text-lg font-medium ${
               isMenu && "hidden"
@@ -166,34 +210,51 @@ const Navbar = () => {
               Our World
             </a>
             <a href="/" className="hover:text-gray-400 tracking-wider">
-              Shrefries
+              Stories
             </a>
           </div>
         </div>
 
         {/* Center - Navigation Links + Logo */}
-        <LogoIcon
-          className={isDropdownOpen || isMenu || isWorldOpen ? "#000000" : "#ffffff"}
-        />
-
+        <Link to={`/`}>
+          <LogoIcon
+            className={
+              isDropdownOpen || isMenu || isServiceOpen || isWorldOpen
+                ? "#000000"
+                : "#ffffff"
+            }
+          />
+        </Link>
         {/* Right Side - Icons */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 text-lg font-bold tracking-wider">
           <div className={`flex items-center gap-14  ${isMenu && "hidden"}`}>
-            <a href="/" className="hover:text-gray-400 tracking-wider">
+            <a
+              onClick={handleServiceClick}
+              className={`hover:text-gray-400 cursor-pointer ${
+                isServiceOpen && " underline"
+              }`}
+            >
               Services
             </a>
-            <a href="/" className="hover:text-gray-400 tracking-wider">
+            <a href="/" className="hover:text-gray-400">
               Boutiques
             </a>
           </div>
           <UserIcon
-            className={isDropdownOpen || isMenu || isWorldOpen ? "#000000" : "#ffffff"}
+            className={
+              isDropdownOpen || isMenu || isServiceOpen || isWorldOpen
+                ? "#000000"
+                : "#ffffff"
+            }
           />
           <WatchIcon
-            className={isDropdownOpen || isMenu || isWorldOpen ? "#000000" : "#ffffff"}
+            className={
+              isDropdownOpen || isMenu || isServiceOpen || isWorldOpen
+                ? "#000000"
+                : "#ffffff"
+            }
           />
         </div>
-
         {/* Mobile Menu */}
         {toggle && (
           <div className="absolute top-16 left-0 w-full bg-black text-white p-4 sm:hidden">

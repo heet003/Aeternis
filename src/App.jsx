@@ -1,5 +1,6 @@
 /* eslint-disable */
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Loader from "./components/Loader";
 import Hero from "./components/Hero";
@@ -13,8 +14,9 @@ function App() {
   };
 
   return (
-    <>
+    <Router>
       <div className="relative w-full h-screen overflow-hidden">
+        {/* Background Video */}
         <video
           autoPlay
           loop
@@ -26,16 +28,19 @@ function App() {
           Your browser does not support the video tag.
         </video>
 
-        {/* Content */}
+        {/* Main Content */}
         <div className="relative z-10">
           <Navbar />
-          <Hero />
+          <Routes>
+            <Route path="/" element={<Hero />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
         </div>
 
         {/* Loader Overlay */}
-        <Loader isLoading={isLoading} onComplete={handleLoaderComplete} />
+        {isLoading && <Loader isLoading={isLoading} onComplete={handleLoaderComplete} />}
       </div>
-    </>
+    </Router>
   );
 }
 
