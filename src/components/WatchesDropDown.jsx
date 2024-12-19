@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { right, left } from "../assets";
-import { fadeIn } from "../utils/motion";
+import { fadeIn, fadeInOpacity } from "../utils/motion";
 import { motion } from "framer-motion";
 
 const WatchesDropDown = () => {
@@ -90,7 +90,7 @@ const WatchesDropDown = () => {
     <>
       <div className="dropdown-watches p-10 pt-[9.5rem] z-10"></div>
       <motion.h1
-        variants={fadeIn("up", "tween", 0.3, 1)}
+        variants={fadeInOpacity(0.2, 1)}
         initial="hidden"
         whileInView="show"
         className="text-6xl font-extralight text-center w-1/3 ml-56"
@@ -99,47 +99,62 @@ const WatchesDropDown = () => {
       </motion.h1>
       <div className="flex flex-col lg:flex-row gap-10">
         <motion.div
-          className="lg:w-1/6 text-center"
-          variants={fadeIn("up", "tween", 0.4, 1)}
+          variants={fadeInOpacity(0.7, 1)}
           initial="hidden"
           whileInView="show"
+          className="lg:w-1/6 text-center"
         >
           <div className="flex flex-col gap-4 p-2 text-black">
-            <a
+            <motion.a
+              variants={fadeIn("up", "tween", 0.7, 0.5)}
+              initial="hidden"
+              whileInView="show"
               to="/"
               className="hover:text-gray-400 tracking-wider cursor-pointer"
             >
               All Watches
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              variants={fadeIn("up", "tween", 0.7, 0.5)}
+              initial="hidden"
+              whileInView="show"
               to="/"
               className="hover:text-gray-400 tracking-wider cursor-pointer"
             >
               Our Collections
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              variants={fadeIn("up", "tween", 0.7, 0.5)}
+              initial="hidden"
+              whileInView="show"
               to="/"
               className="hover:text-gray-400 tracking-wider cursor-pointer"
             >
               New Releases
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              variants={fadeIn("up", "tween", 0.7, 0.5)}
+              initial="hidden"
+              whileInView="show"
               to="/"
               className="hover:text-gray-400 tracking-wider cursor-pointer"
             >
               Exceptional
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              variants={fadeIn("up", "tween", 0.7, 0.5)}
+              initial="hidden"
+              whileInView="show"
               to="/"
               className="hover:text-gray-400 tracking-wider cursor-pointer"
             >
               Timepieces
-            </a>
+            </motion.a>
           </div>
         </motion.div>
 
         <motion.div
-          variants={fadeIn("up", "tween", 0.5, 1)}
+          variants={fadeInOpacity(0.2, 1)}
           initial="hidden"
           whileInView="show"
           className="lg:w-5/6 p-2"

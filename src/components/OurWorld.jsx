@@ -91,7 +91,7 @@ const OurWorld = () => {
     <>
       <div className="p-28 pt-16 z-10"></div>
       <motion.p
-        variants={fadeInOpacity(0.4, 1)}
+        variants={fadeInOpacity(0.2, 1)}
         initial="hidden"
         whileInView="show"
         className="text-6xl font-extralight text-center w-1/3 ml-60"
@@ -99,11 +99,16 @@ const OurWorld = () => {
         WHO WE <span className="italic collection">ARE</span>
       </motion.p>
       <div className="flex flex-col lg:flex-row gap-8">
-        <div className="lg:w-1/5 pl-10">
+        <motion.div
+          variants={fadeInOpacity(0.7, 1)}
+          initial="hidden"
+          whileInView="show"
+          className="lg:w-1/5 pl-10"
+        >
           {/* Left Sidebar */}
           <div className="flex flex-col space-y-2 text-black">
             <motion.a
-              variants={fadeIn("up", "tween", 1, 0.2)}
+              variants={fadeIn("up", "tween", 0.7, 0.5)}
               initial="hidden"
               whileInView="show"
               to="/"
@@ -112,7 +117,7 @@ const OurWorld = () => {
               Born in Le Brassus
             </motion.a>
             <motion.a
-              variants={fadeIn("up", "tween", 1, 0.3)}
+              variants={fadeIn("up", "tween", 0.7, 0.6)}
               initial="hidden"
               whileInView="show"
               to="/"
@@ -121,7 +126,7 @@ const OurWorld = () => {
               Savoir-Faire
             </motion.a>
             <motion.a
-              variants={fadeIn("up", "tween", 1, 0.4)}
+              variants={fadeIn("up", "tween", 0.7, 0.7)}
               initial="hidden"
               whileInView="show"
               to="/"
@@ -130,7 +135,7 @@ const OurWorld = () => {
               AP x Art
             </motion.a>
             <motion.a
-              variants={fadeIn("up", "tween", 1, 0.5)}
+              variants={fadeIn("up", "tween", 0.7, 0.8)}
               initial="hidden"
               whileInView="show"
               to="/"
@@ -139,7 +144,7 @@ const OurWorld = () => {
               AP x Music
             </motion.a>
             <motion.a
-              variants={fadeIn("up", "tween", 1, 0.6)}
+              variants={fadeIn("up", "tween", 0.7, 0.9)}
               initial="hidden"
               whileInView="show"
               to="/"
@@ -148,7 +153,7 @@ const OurWorld = () => {
               Foundation
             </motion.a>
             <motion.a
-              variants={fadeIn("up", "tween", 1, 0.7)}
+              variants={fadeIn("up", "tween", 0.7, 1)}
               initial="hidden"
               whileInView="show"
               to="/"
@@ -157,7 +162,7 @@ const OurWorld = () => {
               Musée Atelier
             </motion.a>
             <motion.a
-              variants={fadeIn("up", "tween", 1, 0.8)}
+              variants={fadeIn("up", "tween", 0.7, 1.1)}
               initial="hidden"
               whileInView="show"
               to="/"
@@ -166,11 +171,11 @@ const OurWorld = () => {
               AP Chronicles
             </motion.a>
           </div>
-        </div>
+        </motion.div>
 
         {/* Image Slider */}
         <motion.div
-          variants={fadeInOpacity(0.4, 1)}
+          variants={fadeInOpacity(0.2, 1)}
           initial="hidden"
           whileInView="show"
           className="lg:w-4/5 p-2"
