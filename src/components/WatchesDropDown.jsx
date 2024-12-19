@@ -3,8 +3,7 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import right from "../assets/right-arrow.svg";
-import left from "../assets/left-arrow.svg";
+import { right, left } from "../assets";
 
 const WatchesDropDown = () => {
   const [showLeftArrow, setShowLeftArrow] = useState(false);
@@ -87,7 +86,7 @@ const WatchesDropDown = () => {
 
   return (
     <>
-      <div className="dropdown-watches p-10 pt-[7rem]"></div>
+      <div className="dropdown-watches p-10 pt-[9.5rem] z-10"></div>
       <h1 className="text-6xl font-extralight text-center w-1/3 ml-56">
         Our <span className="italic collection">Collections</span>
       </h1>
