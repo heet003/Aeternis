@@ -7,7 +7,7 @@ import Hero from "./components/Hero";
 import bg from "./assets/bg.mp4";
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleLoaderComplete = () => {
     setIsLoading(false);

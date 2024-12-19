@@ -86,3 +86,19 @@ export const staggerContainer = (staggerChildren, delayChildren) => {
     },
   };
 };
+
+export const fadeInOpacity = (delay, duration) => {
+  return {
+    hidden: {
+      opacity: 0,
+    },
+    show: {
+      opacity: 1,
+      transition: {
+        duration: duration,
+        delay: delay,
+        ease: "easeInOut",
+      },
+    },
+  };
+};

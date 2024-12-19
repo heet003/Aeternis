@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { right, left } from "../assets";
+import { motion } from "framer-motion";
+import { fadeIn } from "../utils/motion";
 
 const Services = () => {
   const [showLeftArrow, setShowLeftArrow] = useState(false);
@@ -84,11 +86,21 @@ const Services = () => {
   return (
     <>
       <div className="p-28 pt-20 z-10"></div>
-      <p className="text-6xl font-extralight text-center w-1/3 ml-60">
+      <motion.p
+        variants={fadeIn("up", "tween", 0.3, 1)}
+        initial="hidden"
+        whileInView="show"
+        className="text-6xl font-extralight text-center w-1/3 ml-60"
+      >
         OUR <span className="italic collection">SERVICES</span>
-      </p>
+      </motion.p>
       <div className="flex flex-col lg:flex-row gap-8">
-        <div className="lg:w-1/5 pl-10">
+        <motion.div
+          variants={fadeIn("up", "tween", 0.3, 1)}
+          initial="hidden"
+          whileInView="show"
+          className="lg:w-1/5 pl-10"
+        >
           {/* Left Sidebar */}
           <div className="flex flex-col space-y-2 text-black">
             <a
@@ -128,10 +140,15 @@ const Services = () => {
               Repair pick up
             </a>
           </div>
-        </div>
+        </motion.div>
 
         {/* Image Slider */}
-        <div className="lg:w-4/5 p-2">
+        <motion.div
+          variants={fadeIn("up", "tween", 0.3, 1)}
+          initial="hidden"
+          whileInView="show"
+          className="lg:w-4/5 p-2"
+        >
           <Slider {...settings}>
             {images.map((img, index) => (
               <div key={index} className="world-card">
@@ -145,7 +162,7 @@ const Services = () => {
               </div>
             ))}
           </Slider>
-        </div>
+        </motion.div>
       </div>
     </>
   );

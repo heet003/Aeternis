@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { right, left } from "../assets";
+import { motion } from "framer-motion";
+import { fadeIn, fadeInOpacity } from "../utils/motion";
 
 const OurWorld = () => {
   const [showLeftArrow, setShowLeftArrow] = useState(false);
@@ -88,60 +90,91 @@ const OurWorld = () => {
   return (
     <>
       <div className="p-28 pt-16 z-10"></div>
-      <p className="text-6xl font-extralight text-center w-1/3 ml-60">
+      <motion.p
+        variants={fadeInOpacity(0.4, 1)}
+        initial="hidden"
+        whileInView="show"
+        className="text-6xl font-extralight text-center w-1/3 ml-60"
+      >
         WHO WE <span className="italic collection">ARE</span>
-      </p>
+      </motion.p>
       <div className="flex flex-col lg:flex-row gap-8">
         <div className="lg:w-1/5 pl-10">
           {/* Left Sidebar */}
           <div className="flex flex-col space-y-2 text-black">
-            <a
+            <motion.a
+              variants={fadeIn("up", "tween", 1, 0.2)}
+              initial="hidden"
+              whileInView="show"
               to="/"
               className="hover:text-gray-400 tracking-wider cursor-pointer"
             >
               Born in Le Brassus
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              variants={fadeIn("up", "tween", 1, 0.3)}
+              initial="hidden"
+              whileInView="show"
               to="/"
               className="hover:text-gray-400 tracking-wider cursor-pointer"
             >
               Savoir-Faire
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              variants={fadeIn("up", "tween", 1, 0.4)}
+              initial="hidden"
+              whileInView="show"
               to="/"
               className="hover:text-gray-400 tracking-wider cursor-pointer"
             >
               AP x Art
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              variants={fadeIn("up", "tween", 1, 0.5)}
+              initial="hidden"
+              whileInView="show"
               to="/"
               className="hover:text-gray-400 tracking-wider cursor-pointer"
             >
               AP x Music
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              variants={fadeIn("up", "tween", 1, 0.6)}
+              initial="hidden"
+              whileInView="show"
               to="/"
               className="hover:text-gray-400 tracking-wider cursor-pointer"
             >
               Foundation
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              variants={fadeIn("up", "tween", 1, 0.7)}
+              initial="hidden"
+              whileInView="show"
               to="/"
               className="hover:text-gray-400 tracking-wider cursor-pointer"
             >
               Musée Atelier
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              variants={fadeIn("up", "tween", 1, 0.8)}
+              initial="hidden"
+              whileInView="show"
               to="/"
               className="hover:text-gray-400 tracking-wider cursor-pointer"
             >
               AP Chronicles
-            </a>
+            </motion.a>
           </div>
         </div>
 
         {/* Image Slider */}
-        <div className="lg:w-4/5 p-2">
+        <motion.div
+          variants={fadeInOpacity(0.4, 1)}
+          initial="hidden"
+          whileInView="show"
+          className="lg:w-4/5 p-2"
+        >
           <Slider {...settings}>
             {images.map((img, index) => (
               <div key={index} className="world-card">
@@ -155,7 +188,7 @@ const OurWorld = () => {
               </div>
             ))}
           </Slider>
-        </div>
+        </motion.div>
       </div>
     </>
   );

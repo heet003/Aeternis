@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { right, left } from "../assets";
+import { fadeIn } from "../utils/motion";
+import { motion } from "framer-motion";
 
 const WatchesDropDown = () => {
   const [showLeftArrow, setShowLeftArrow] = useState(false);
@@ -87,11 +89,21 @@ const WatchesDropDown = () => {
   return (
     <>
       <div className="dropdown-watches p-10 pt-[9.5rem] z-10"></div>
-      <h1 className="text-6xl font-extralight text-center w-1/3 ml-56">
+      <motion.h1
+        variants={fadeIn("up", "tween", 0.3, 1)}
+        initial="hidden"
+        whileInView="show"
+        className="text-6xl font-extralight text-center w-1/3 ml-56"
+      >
         Our <span className="italic collection">Collections</span>
-      </h1>
+      </motion.h1>
       <div className="flex flex-col lg:flex-row gap-10">
-        <div className="lg:w-1/6 text-center">
+        <motion.div
+          className="lg:w-1/6 text-center"
+          variants={fadeIn("up", "tween", 0.4, 1)}
+          initial="hidden"
+          whileInView="show"
+        >
           <div className="flex flex-col gap-4 p-2 text-black">
             <a
               to="/"
@@ -124,9 +136,14 @@ const WatchesDropDown = () => {
               Timepieces
             </a>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="lg:w-5/6 p-2">
+        <motion.div
+          variants={fadeIn("up", "tween", 0.5, 1)}
+          initial="hidden"
+          whileInView="show"
+          className="lg:w-5/6 p-2"
+        >
           <Slider {...settings}>
             {images.map((img, index) => (
               <div key={index} className="watch-card">
@@ -141,7 +158,7 @@ const WatchesDropDown = () => {
               </div>
             ))}
           </Slider>
-        </div>
+        </motion.div>
       </div>
     </>
   );
