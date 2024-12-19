@@ -77,7 +77,7 @@ const MenuDropDown = () => {
   ];
 
   return (
-    <div className="p-28 pt-48 overflow-y-scroll h-[100vh] z-10">
+    <div className="p-28 pt-48 overflow-y-scroll h-screen z-10">
       <div className="flex flex-col lg:flex-row gap-8 ">
         {/* Sidebar */}
         <div className="lg:w-1/5">

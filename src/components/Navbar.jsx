@@ -1,159 +1,211 @@
 /* eslint-disable */
 import React, { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import WatchesDropDown from "./WatchesDropDown";
+import { user } from "../assets";
 import MenuDropDown from "./menuDropDown";
-import { clsx } from "clsx"; // Optional utility for class names
 
 const Navbar = () => {
-  const [isWatchesOpen, setIsWatchesOpen] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [toggle, setToggle] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMenu, setIsMenu] = useState(false);
   const [navbarColor, setNavbarColor] = useState("text-white");
-  const watchesRef = useRef(null);
-  const menuRef = useRef(null);
+  const dropdownRef = useRef(null);
+  const menuref = useRef(null);
 
-  const toggleDropdown = (dropdownRef, isOpen, setOpenState) => {
-    if (!isOpen) {
+  const handleWatchesClick = () => {
+    if (!isDropdownOpen) {
       gsap.fromTo(
         dropdownRef.current,
         { height: 0, opacity: 0 },
         { height: "auto", opacity: 1, duration: 0.5, ease: "power2.out" }
       );
+      setIsDropdownOpen(true);
       setNavbarColor("text-black");
     } else {
-      gsap.to(dropdownRef.current, {
-        height: 0,
-        opacity: 0,
-        duration: 0.5,
-        ease: "power2.out",
-      });
+      gsap.fromTo(
+        dropdownRef.current,
+        { height: "auto", opacity: 1 },
+        {
+          height: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power2.out",
+        }
+      );
+      setIsDropdownOpen(false);
       setNavbarColor("text-white");
     }
-    setOpenState(!isOpen);
+  };
+
+  const handleMenuDropDown = () => {
+    if (!isMenu) {
+      setIsDropdownOpen(false);
+      gsap.fromTo(
+        menuref.current,
+        { height: 0, opacity: 0 },
+        { height: "auto", opacity: 1, duration: 0.5, ease: "power2.out" }
+      );
+      setIsMenu(true);
+      setNavbarColor("text-black");
+    } else {
+      gsap.fromTo(
+        menuref.current,
+        { height: "auto", opacity: 1 },
+        {
+          height: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power2.out",
+        }
+      );
+      setIsMenu(false);
+      setNavbarColor("text-white");
+    }
   };
 
   return (
     <>
-      {/* Menu Dropdown */}
+      {/* Menu  */}
       <div
-        ref={menuRef}
-        className={clsx(
-          "absolute w-full bg-white text-black z-10 overflow-hidden",
-          isMenuOpen ? "visible" : "invisible"
-        )}
-        style={{ height: isMenuOpen ? "auto" : "0px" }}
+        ref={menuref}
+        className={`absolute w-full bg-white text-black z-10 ${
+          isMenu ? "visible" : "invisible"
+        }`}
+        style={{ height: "0px" }}
       >
         <MenuDropDown />
       </div>
-
-      {/* Watches Dropdown */}
+      {/* Watches Drop Down Menu  */}
       <div
-        ref={watchesRef}
-        className={clsx(
-          "absolute w-full bg-white text-black z-10 overflow-hidden",
-          isWatchesOpen ? "visible" : "invisible"
-        )}
-        style={{ height: isWatchesOpen ? "auto" : "0px" }}
+        ref={dropdownRef}
+        className={`absolute w-full bg-white text-black z-10 overflow-hidden ${
+          isDropdownOpen ? "visible" : "invisible"
+        }`}
+        style={{ height: "0px" }}
       >
         <WatchesDropDown />
       </div>
 
-      {/* Navigation Bar */}
+      {/* Navigation Bar  */}
       <nav
-        className={clsx(
-          "w-[90%] mx-auto flex items-center justify-between py-16 px-6 sticky z-20",
-          navbarColor,
-          isMenuOpen || isWatchesOpen ? "bg-white" : ""
-        )}
+        className={`w-[90%] mx-auto flex items-center justify-between py-16 px-6 ${navbarColor} sticky z-20 ${
+          (isDropdownOpen || isMenu) && "bg-white"
+        }`}
       >
-        {/* Left Section */}
-        <div className="flex items-center gap-6 text-lg font-medium">
-          <button
-            onClick={() => toggleDropdown(menuRef, isMenuOpen, setIsMenuOpen)}
-          >
-            {isMenuOpen ? (
-              <CloseIcon className="text-white w-10 h-10" />
+        <div className="flex items-center justify-center gap-6 text-lg font-medium">
+          <button onClick={handleMenuDropDown} className={`cursor-pointer`}>
+            {isMenu ? (
+              <CloseIcon className={`w-[40px] h-[40px] cursor-pointer`} />
             ) : (
-              <MenuIcon className="text-white w-10 h-10" />
+              <MenuIcon className={`w-[40px] h-[40px] cursor-pointer`} />
             )}
           </button>
-          <div className="flex gap-14">
+
+          <div
+            className={`flex items-center justify-center gap-14 text-lg font-medium ${
+              isMenu && "hidden"
+            }`}
+          >
             <a
-              onClick={() =>
-                toggleDropdown(watchesRef, isWatchesOpen, setIsWatchesOpen)
-              }
-              className={clsx(
-                "hover:text-gray-400 cursor-pointer",
-                isWatchesOpen && "underline"
-              )}
+              onClick={handleWatchesClick}
+              className={`hover:text-gray-400 tracking-wider cursor-pointer ${
+                isDropdownOpen && " underline"
+              }`}
             >
               Watches
             </a>
-            <a href="/" className="hover:text-gray-400">
+            <a href="/" className="hover:text-gray-400 tracking-wider">
               Our World
             </a>
-            <a href="/" className="hover:text-gray-400">
+            <a href="/" className="hover:text-gray-400 tracking-wider">
               Shrefries
             </a>
           </div>
         </div>
 
-        {/* Logo */}
-        <svg
-          width="80px"
-          height="80px"
-          viewBox="0 0 128 128"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-          role="img"
-          className="iconify iconify--noto"
-          preserveAspectRatio="xMidYMid meet"
-        >
-          <path
-            d="M109.48 16.34H84.84c-1.28 0-2.33 1.04-2.33 2.33v36.27H45.5V18.68c0-1.29-1.04-2.33-2.34-2.33H18.53a2.34 2.34 0 0 0-2.34 2.33v99.96c0 1.29 1.05 2.33 2.34 2.33h24.63a2.34 2.34 0 0 0 2.34-2.33V76.15h37.02v42.48c0 1.29 1.05 2.33 2.33 2.33h24.64c1.29 0 2.33-1.05 2.33-2.33V18.68a2.35 2.35 0 0 0-2.34-2.34z"
-            fill={isMenuOpen || isWatchesOpen ? "#000000" : "#ffffff"}
-          ></path>
-        </svg>
+        {/* Center - Navigation Links + Logo */}
+        <LogoIcon
+          className={isDropdownOpen || isMenu ? "#000000" : "#ffffff"}
+        />
 
-        {/* Right Section */}
+        {/* Right Side - Icons */}
         <div className="flex items-center gap-6">
-          <div className="flex gap-14">
-            <a href="/" className="hover:text-gray-400">
+          <div className={`flex items-center gap-14  ${isMenu && "hidden"}`}>
+            <a href="/" className="hover:text-gray-400 tracking-wider">
               Services
             </a>
-            <a href="/" className="hover:text-gray-400">
+            <a href="/" className="hover:text-gray-400 tracking-wider">
               Boutiques
             </a>
           </div>
-          <UserIcon
-            className={
-              isMenuOpen || isWatchesOpen ? "text-black" : "text-white"
-            }
-          />
-          <WatchIcon
-            className={isMenuOpen || isWatchesOpen ? "#000000" : "#ffffff"}
-          />
+          <UserIcon className={isDropdownOpen || isMenu ? "#000000" : "#ffffff"} />
+          <WatchIcon className={isDropdownOpen || isMenu ? "#000000" : "#ffffff"} />
         </div>
+
+        {/* Mobile Menu */}
+        {toggle && (
+          <div className="absolute top-16 left-0 w-full bg-black text-white p-4 sm:hidden">
+            <Link to="/" className="block py-2">
+              Watches
+            </Link>
+            <Link to="/" className="block py-2">
+              Our World
+            </Link>
+            <Link to="/" className="block py-2">
+              Stories
+            </Link>
+            <Link to="/" className="block py-2">
+              Services
+            </Link>
+            <Link to="/" className="block py-2">
+              Boutiques
+            </Link>
+          </div>
+        )}
       </nav>
     </>
   );
 };
 
+const LogoIcon = ({ className }) => (
+  <svg
+    width="80px"
+    height="80px"
+    viewBox="0 0 128 128"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    aria-hidden="true"
+    role="img"
+    class="iconify iconify--noto"
+    preserveAspectRatio="xMidYMid meet"
+  >
+    <path
+      d="M109.48 16.34H84.84c-1.28 0-2.33 1.04-2.33 2.33v36.27H45.5V18.68c0-1.29-1.04-2.33-2.34-2.33H18.53a2.34 2.34 0 0 0-2.34 2.33v99.96c0 1.29 1.05 2.33 2.34 2.33h24.63a2.34 2.34 0 0 0 2.34-2.33V76.15h37.02v42.48c0 1.29 1.05 2.33 2.33 2.33h24.64c1.29 0 2.33-1.05 2.33-2.33V18.68a2.35 2.35 0 0 0-2.34-2.34z"
+      fill={className}
+    ></path>
+  </svg>
+);
+
 const MenuIcon = ({ className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className={className}
+    class={className}
+    fill="currentColor"
     viewBox="0 0 24 24"
   >
-    <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" strokeWidth="2" />
+    <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" />
   </svg>
 );
 
 const CloseIcon = ({ className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className={className}
+    class={className}
     viewBox="0 0 50 50"
+    width="50px"
+    height="50px"
   >
     <path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z" />
   </svg>
@@ -161,19 +213,18 @@ const CloseIcon = ({ className }) => (
 
 const UserIcon = ({ className }) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
-    width="40"
-    height="40"
+    width="40px"
+    height="40px"
     viewBox="0 0 24 24"
     fill="none"
+    xmlns="http://www.w3.org/2000/svg"
   >
     <path
       d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      stroke={className}
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
     />
   </svg>
 );
