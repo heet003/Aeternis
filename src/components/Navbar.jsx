@@ -3,16 +3,19 @@ import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import WatchesDropDown from "./WatchesDropDown";
+import OurWorld from "./OurWorld";
 import { user } from "../assets";
 import MenuDropDown from "./menuDropDown";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isWorldOpen, setIsWorldOpen] = useState(false);
   const [isMenu, setIsMenu] = useState(false);
   const [navbarColor, setNavbarColor] = useState("text-white");
   const dropdownRef = useRef(null);
   const menuref = useRef(null);
+  const worldref = useRef(null);
 
   const handleWatchesClick = () => {
     if (!isDropdownOpen) {
@@ -22,6 +25,7 @@ const Navbar = () => {
         { height: "auto", opacity: 1, duration: 0.5, ease: "power2.out" }
       );
       setIsDropdownOpen(true);
+      setIsWorldOpen(false);
       setNavbarColor("text-black");
     } else {
       gsap.fromTo(
@@ -39,9 +43,36 @@ const Navbar = () => {
     }
   };
 
+  const handleWorldClick = () => {
+    if (!isWorldOpen) {
+      gsap.fromTo(
+        worldref.current,
+        { height: 0, opacity: 0 },
+        { height: "auto", opacity: 1, duration: 0.5, ease: "power2.out" }
+      );
+      setIsWorldOpen(true);
+      setIsDropdownOpen(false);
+      setNavbarColor("text-black");
+    } else {
+      gsap.fromTo(
+        worldref.current,
+        { height: "auto", opacity: 1 },
+        {
+          height: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power2.out",
+        }
+      );
+      setIsWorldOpen(false);
+      setNavbarColor("text-white");
+    }
+  };
+
   const handleMenuDropDown = () => {
     if (!isMenu) {
       setIsDropdownOpen(false);
+      setIsWorldOpen(false);
       gsap.fromTo(
         menuref.current,
         { height: 0, opacity: 0 },
@@ -87,6 +118,16 @@ const Navbar = () => {
       >
         <WatchesDropDown />
       </div>
+      {/* Our World Menu  */}
+      <div
+        ref={worldref}
+        className={`absolute w-full bg-white text-black z-10 overflow-hidden ${
+          isWorldOpen ? "visible" : "invisible"
+        }`}
+        style={{ height: "0px" }}
+      >
+        <OurWorld />
+      </div>
 
       {/* Navigation Bar  */}
       <nav
@@ -116,7 +157,12 @@ const Navbar = () => {
             >
               Watches
             </a>
-            <a href="/" className="hover:text-gray-400 tracking-wider">
+            <a
+              onClick={handleWorldClick}
+              className={`hover:text-gray-400 tracking-wider cursor-pointer ${
+                isWorldOpen && " underline"
+              }`}
+            >
               Our World
             </a>
             <a href="/" className="hover:text-gray-400 tracking-wider">
@@ -127,7 +173,7 @@ const Navbar = () => {
 
         {/* Center - Navigation Links + Logo */}
         <LogoIcon
-          className={isDropdownOpen || isMenu ? "#000000" : "#ffffff"}
+          className={isDropdownOpen || isMenu || isWorldOpen ? "#000000" : "#ffffff"}
         />
 
         {/* Right Side - Icons */}
@@ -140,8 +186,12 @@ const Navbar = () => {
               Boutiques
             </a>
           </div>
-          <UserIcon className={isDropdownOpen || isMenu ? "#000000" : "#ffffff"} />
-          <WatchIcon className={isDropdownOpen || isMenu ? "#000000" : "#ffffff"} />
+          <UserIcon
+            className={isDropdownOpen || isMenu || isWorldOpen ? "#000000" : "#ffffff"}
+          />
+          <WatchIcon
+            className={isDropdownOpen || isMenu || isWorldOpen ? "#000000" : "#ffffff"}
+          />
         </div>
 
         {/* Mobile Menu */}
