@@ -84,7 +84,7 @@ const MenuDropDown = () => {
         {/* Sidebar */}
         <motion.div
           className="lg:w-1/5"
-          variants={fadeIn("up", "tween", 1, 1)}
+          variants={fadeIn("up", "tween", 0.7, 0.5)}
           initial="hidden"
           whileInView="show"
         >
@@ -93,12 +93,15 @@ const MenuDropDown = () => {
               <h1 className="text-gray-500 text-xl mb-4">{menu.category}</h1>
               <ul className="space-y-2">
                 {menu.links.map((link, i) => (
-                  <li
+                  <motion.li
+                    variants={fadeIn("up", "tween", 1, 1)}
+                    initial="hidden"
+                    whileInView="show"
                     key={i}
                     className="text-black hover:text-gray-400 cursor-pointer"
                   >
                     {link}
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </div>
