@@ -88,7 +88,7 @@ function Podcast() {
   };
 
   return (
-    <div className="bg-black text-white pl-10 pt-20 pb-20 w-full min-h-screen">
+    <div className="bg-black text-white px-2 sm:pl-10 pt-20 pb-20 w-full min-h-screen">
       <div className="flex flex-col xl:flex-row items-start justify-between lg:gap-10">
         {/* Text Section */}
         <div className="flex-col space-y-10 xl:w-1/3 mb-8 lg:mb-0 text-left">
@@ -104,7 +104,7 @@ function Podcast() {
             variants={fadeIn("up", "tween", 0.5, 0.6)}
             initial="hidden"
             whileInView="show"
-            className="text-lg md:text-[1rem] px-2 pr-10"
+            className="text-md font-extralight md:text-lg lg:text-xl px-2 pr-10"
           >
             Discover the third episode of the Fusion Podcast, a series of
             conversations presenting Hublot's craftsmanship, heritage
@@ -126,13 +126,13 @@ function Podcast() {
                 <img
                   src={image.url}
                   alt={image.name}
-                  className="w-full h-auto object-cover rounded-md"
+                  className="w-full h-auto object-contain rounded-md"
                 />
                 <motion.p
                   variants={fadeIn("up", "tween", 0.5, 0.5)}
                   initial="hidden"
                   whileInView="show"
-                  className="text-sm text-left font-medium"
+                  className="text-md sm:text-lg md:text-xl lg:text-2xl font-semibold"
                 >
                   {image.name}
                 </motion.p>
@@ -140,7 +140,7 @@ function Podcast() {
                   variants={fadeIn("up", "tween", 0.5, 0.5)}
                   initial="hidden"
                   whileInView="show"
-                  className="text-sm font-light"
+                  className="text-sm sm:text-md md:text-lg lg:text-xl font-light"
                 >
                   {image.desc}
                 </motion.p>
@@ -149,7 +149,7 @@ function Podcast() {
                   initial="hidden"
                   whileInView="show"
                   href={image.link}
-                  className="discover-more text-lg md:text-sm"
+                  className="discover-more text-lg md:text-md"
                 >
                   Discover More
                 </a>

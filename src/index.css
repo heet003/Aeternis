@@ -35,7 +35,6 @@ body {
 /* Discover anchor link hover animation  */
 .discover-more {
   cursor: pointer;
-  font-size: 1.3rem;
   text-decoration: none;
   display: inline-block;
   padding: 0.5em;
@@ -74,7 +73,6 @@ body {
 
 .discover-more-black {
   cursor: pointer;
-  font-size: 1.3rem;
   text-decoration: none;
   display: inline-block;
   padding: 0.5em;

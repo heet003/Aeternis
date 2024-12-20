@@ -100,7 +100,7 @@ function WatchShowcase() {
   };
 
   return (
-    <div className="bg-black  text-white pl-10 pt-20 pb-20 w-full min-h-screen">
+    <div className="bg-black text-white px-2 sm:pl-10 w-full min-h-screen py-20">
       <div className="flex flex-col xl:flex-row items-start justify-between lg:gap-10">
         {/* Text Section */}
         <div className="flex-col space-y-10 xl:w-1/3 mb-8 lg:mb-0 text-left">
@@ -131,7 +131,7 @@ function WatchShowcase() {
         >
           <Slider {...settings}>
             {images.map((image, index) => (
-              <div key={index} className="p-3 flex-col space-y-4">
+              <div key={index} className="pb-10 p-3 flex-col space-y-4">
                 <img
                   src={image.url}
                   alt={image.name}
@@ -141,7 +141,7 @@ function WatchShowcase() {
                   variants={fadeIn("up", "tween", 0.5, 0.5)}
                   initial="hidden"
                   whileInView="show"
-                  className="text-sm text-left font-medium"
+                  className="text-md sm:text-lg lg:text-xl font-semibold"
                 >
                   {image.name}
                 </motion.p>
@@ -149,11 +149,11 @@ function WatchShowcase() {
                   variants={fadeIn("up", "tween", 0.5, 0.5)}
                   initial="hidden"
                   whileInView="show"
-                  className="text-sm font-light"
+                  className="text-sm sm:text-md lg:text-lg font-light"
                 >
                   {image.desc}
                 </motion.p>
-                <motion.a
+                <a
                   variants={fadeIn("up", "tween", 0.5, 0.5)}
                   initial="hidden"
                   whileInView="show"
@@ -161,7 +161,7 @@ function WatchShowcase() {
                   className="discover-more text-lg md:text-sm"
                 >
                   Discover More
-                </motion.a>
+                </a>
               </div>
             ))}
           </Slider>

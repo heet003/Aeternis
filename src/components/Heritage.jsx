@@ -5,7 +5,7 @@ import { fadeInOpacity, fadeIn } from "../utils/motion";
 
 function Heritage() {
   return (
-    <div className="bg-black  py-40 p-20 w-full overflow-x-hidden">
+    <div className="bg-black py-40 p-5 sm:p-20 w-full overflow-x-hidden">
       <motion.div
         variants={fadeInOpacity(0.3, 0.5)}
         initial="hidden"

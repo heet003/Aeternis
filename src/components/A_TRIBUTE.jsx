@@ -5,29 +5,29 @@ import { fadeInOpacity, fadeIn } from "../utils/motion";
 
 function A_TRIBUTE() {
   return (
-    <div className="bg-black py-40 p-20 w-full overflow-x-hidden">
+    <div className="bg-black p-5 sm:p-20 w-full overflow-x-hidden py-40">
       <motion.div
         variants={fadeInOpacity(0.3, 0.5)}
         initial="hidden"
         whileInView="show"
-        className="flex flex-col-reverse lg:flex-row-reverse items-center lg:items-start gap-8"
+        className="flex flex-col lg:flex-row-reverse items-center lg:items-start gap-8"
       >
         {/* Image Section */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <img
             src="https://www.jomashop.com/blog/content/images/2022/11/Untitled-design--41-.png"
             alt="Unico Ceramic Magic Gold"
-            className="object-cover w-full h-auto max-w-[300px] lg:max-w-none"
+            className="object-cover w-full h-auto lg:max-w-none"
           />
         </div>
 
         {/* Text Content Section */}
-        <div className="w-full lg:w-1/2 text-white tracking-tighter px-6">
+        <div className="w-full lg:w-1/2 space-y-1 text-white tracking-tighter px-6 lg:space-y-2">
           <motion.p
             variants={fadeIn("up", "tween", 0.5, 0.5)}
             initial="hidden"
             whileInView="show"
-            className="text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl lightHeading"
+            className="text-3xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl lightHeading"
           >
             [RE]MASTER02,
           </motion.p>
@@ -35,7 +35,7 @@ function A_TRIBUTE() {
             variants={fadeIn("up", "tween", 0.6, 0.5)}
             initial="hidden"
             whileInView="show"
-            className="italic timesfonts text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl"
+            className="italic timesfonts text-3xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl"
           >
             A
           </motion.p>
@@ -43,7 +43,7 @@ function A_TRIBUTE() {
             variants={fadeIn("up", "tween", 0.7, 0.5)}
             initial="hidden"
             whileInView="show"
-            className="italic timesfonts text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl"
+            className="italic timesfonts text-3xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl"
           >
             TRIBUTE
           </motion.p>
@@ -51,7 +51,7 @@ function A_TRIBUTE() {
             variants={fadeIn("up", "tween", 0.8, 0.5)}
             initial="hidden"
             whileInView="show"
-            className="italic timesfonts text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl"
+            className="italic timesfonts text-3xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl"
           >
             TO
           </motion.p>
@@ -59,11 +59,11 @@ function A_TRIBUTE() {
             variants={fadeIn("up", "tween", 0.9, 0.5)}
             initial="hidden"
             whileInView="show"
-            className="italic timesfonts text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl"
+            className="italic timesfonts text-3xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl"
           >
             BRUTALISM
           </motion.p>
-          <span className="block mt-8 mb-8 font-extralight text-sm sm:text-base md:text-md lg:text-lg xl:text-xl tracking-normal">
+          <span className="block mt-10 font-extralight text-sm sm:text-base md:text-md lg:text-lg xl:text-xl tracking-normal">
             This new limited edition features an asymmetrical 41 mm rectangular
             case in the new 18-carat sand gold alloy and is equipped with the
             Calibre 7129.

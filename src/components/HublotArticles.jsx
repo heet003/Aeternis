@@ -5,7 +5,7 @@ import { fadeInOpacity, fadeIn } from "../utils/motion";
 
 function HublotArticles() {
   return (
-    <div className="bg-black  py-40 p-20 w-full overflow-x-hidden">
+    <div className="bg-black py-40 p-5 sm:p-20 w-full overflow-x-hidden">
       <motion.div
         variants={fadeInOpacity(0.3, 0.5)}
         initial="hidden"
@@ -22,12 +22,12 @@ function HublotArticles() {
         </div>
 
         {/* Text Content Section */}
-        <div className="w-full lg:w-2/5 text-white tracking-tighter px-6">
+        <div className="w-full lg:w-2/5 text-white space-y-1 tracking-tighter lg:space-y-2">
           <motion.p
             variants={fadeIn("up", "tween", 0.5, 0.5)}
             initial="hidden"
             whileInView="show"
-            className="text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl lightHeading"
+            className="text-4xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl lightHeading"
           >
             HUBLOT
           </motion.p>
@@ -35,7 +35,7 @@ function HublotArticles() {
             variants={fadeIn("up", "tween", 0.6, 0.5)}
             initial="hidden"
             whileInView="show"
-            className="text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl lightHeading"
+            className="text-4xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl lightHeading"
           >
             CHRONICLES:
           </motion.p>
@@ -43,7 +43,7 @@ function HublotArticles() {
             variants={fadeIn("up", "tween", 0.7, 0.5)}
             initial="hidden"
             whileInView="show"
-            className="italic timesfonts text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl"
+            className="italic timesfonts text-4xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl"
           >
             DIVE
           </motion.p>
@@ -51,7 +51,7 @@ function HublotArticles() {
             variants={fadeIn("up", "tween", 0.8, 0.5)}
             initial="hidden"
             whileInView="show"
-            className="italic timesfonts text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl"
+            className="italic timesfonts text-4xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl"
           >
             INTO
           </motion.p>
@@ -59,7 +59,7 @@ function HublotArticles() {
             variants={fadeIn("up", "tween", 0.9, 0.5)}
             initial="hidden"
             whileInView="show"
-            className="italic timesfonts text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl"
+            className="italic timesfonts text-4xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl"
           >
             HUBLOT'S
           </motion.p>
@@ -67,11 +67,11 @@ function HublotArticles() {
             variants={fadeIn("up", "tween", 1, 0.5)}
             initial="hidden"
             whileInView="show"
-            className="italic timesfonts text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl"
+            className="italic timesfonts text-4xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl"
           >
             HISTORY
           </motion.p>
-          <span className="block mt-8 mb-8 font-extralight text-sm sm:text-base md:text-md lg:text-lg xl:text-xl tracking-normal">
+          <span className="block mt-8 font-extralight text-xs sm:text-base md:text-md lg:text-lg xl:text-xl tracking-normal">
             Travel back in time and immerse yourself into Hublot's universe
             through enriched articles, technical sheets of models and calibres
             as well as exclusive anecdotes and archival footages uncovered by

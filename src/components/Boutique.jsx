@@ -17,7 +17,7 @@ function Boutique() {
           <img
             src="https://traveltipzone.com/wp-content/uploads/5-day-switzerland-itinerary-how-to-spend-5-days-in-switzerland-lucerne2-1200x600.jpg"
             alt="Unico Ceramic Magic Gold"
-            className="object-cover w-full h-auto max-w-[300px] lg:max-w-none"
+            className="object-cover w-full h-full lg:max-w-none"
           />
         </div>
 
@@ -27,7 +27,7 @@ function Boutique() {
             variants={fadeIn("up", "tween", 0.5, 0.5)}
             initial="hidden"
             whileInView="show"
-            className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl lightHeading"
+            className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl lightHeading"
           >
             FIND A
           </motion.p>
@@ -35,13 +35,13 @@ function Boutique() {
             variants={fadeIn("up", "tween", 0.6, 0.5)}
             initial="hidden"
             whileInView="show"
-            className="italic timesfonts text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
+            className="italic timesfonts text-4xl sm:text-5xl md:text-6xl xl:text-7xl"
           >
             BOUTIQUE
           </motion.p>
           <a
             href="#"
-            className="discover-more-black cursor-pointer mt-4 text-sm sm:text-base md:text-lg lg:text-xl"
+            className="cursor-pointer mt-4 text-sm sm:text-base md:text-lg lg:text-xl discover-more-black"
           >
             Explore All Boutiques
           </a>
