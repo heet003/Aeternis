@@ -3,7 +3,7 @@ import React from "react";
 
 function HublotArticles() {
   return (
-    <div className="bg-black py-40 p-20 w-full overflow-x-hidden">
+    <div className="bg-black  py-40 p-20 w-full overflow-x-hidden">
       <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
         {/* Image Section */}
         <div className="w-full lg:w-3/5 flex justify-center">

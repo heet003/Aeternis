@@ -100,7 +100,7 @@ function WatchShowcase() {
   };
 
   return (
-    <div className="bg-black text-white pl-10 pt-20 pb-20 w-full min-h-screen">
+    <div className="bg-black  text-white pl-10 pt-20 pb-20 w-full min-h-screen">
       <div className="flex flex-col xl:flex-row items-start justify-between lg:gap-10">
         {/* Text Section */}
         <div className="flex-col space-y-10 xl:w-1/3 mb-8 lg:mb-0 text-left">

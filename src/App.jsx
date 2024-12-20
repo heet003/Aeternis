@@ -19,6 +19,11 @@ import MiniMighty from "./components/MiniMighty";
 import A_TRIBUTE from "./components/A_TRIBUTE";
 import HublotArticles from "./components/HublotArticles";
 import Podcast from "./components/Podcast";
+import Heritage from "./components/Heritage";
+import Warranty from "./components/Warranty";
+import Boutique from "./components/BOUTIQUE";
+import Newsletter from "./components/Newsletter";
+import Footer from "./components/Footer";
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -47,11 +52,16 @@ function App() {
                   <A_TRIBUTE />
                   <HublotArticles />
                   <Podcast />
+                  <Heritage />
+                  <Warranty />
+                  <Boutique />
+                  <Newsletter />
                 </>
               }
             />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
+          <Footer />
         </div>
       </Router>
       {/* Loader Overlay */}
