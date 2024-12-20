@@ -4,6 +4,8 @@ import H from "./H.svg";
 import left from "./left-arrow.svg";
 import right from "./right-arrow.svg";
 import bg from "./bg.mp4";
+import hublotWatch from "./hublotWatch.webm";
+import greeting from "./greeting.mp4";
 import user from "./user.svg";
 import watch from "./watch.svg";
 
@@ -31,4 +33,6 @@ export {
   youtube,
   tiktok,
   pinterest,
+  greeting,
+  hublotWatch,
 };

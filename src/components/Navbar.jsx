@@ -130,7 +130,7 @@ const Navbar = () => {
   };
 
   return (
-    <>
+    <React.Fragment>
       {/* Menu  */}
       <div
         ref={menuref}
@@ -174,7 +174,7 @@ const Navbar = () => {
 
       {/* Navigation Bar  */}
       <nav
-        className={`w-[90%] mx-auto flex items-center justify-between py-12 px-6 ${navbarColor} sticky z-20 ${
+        className={`w-[90%] mx-auto flex items-center justify-between py-12 px-6 ${navbarColor}  z-20 ${
           (isDropdownOpen || isMenu || isServiceOpen) && "bg-white"
         }`}
       >
@@ -283,7 +283,7 @@ const Navbar = () => {
           </div>
         )}
       </nav>
-    </>
+    </React.Fragment>
   );
 };
 
