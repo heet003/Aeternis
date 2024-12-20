@@ -6,14 +6,14 @@ import { fadeIn, fadeInOpacity } from "../utils/motion";
 
 const HublotWatch = () => {
   return (
-    <div className="bg-black py-40 text-white p-20 space-y-8 w-full">
+    <div className="bg-black py-40 text-white p-5 md:p-20 space-y-8 w-full overflow-x-hidden">
       {/* Text Section */}
       <div className="space-y-8">
         <motion.h1
           variants={fadeIn("up", "tween", 0.5, 0.5)}
           initial="hidden"
           whileInView="show"
-          className="text-5xl lightHeading tracking-tighter uppercase font-extralight"
+          className="text-4xl sm:text-5xl lg:text-6xl lightHeading tracking-tighter uppercase"
         >
           Square Bang
           <br />
@@ -26,12 +26,12 @@ const HublotWatch = () => {
             Unico Ceramic Magic Gold
           </motion.span>
         </motion.h1>
-        <div className="px-28 space-y-8 font-extralight">
+        <div className="sm:px-28 px-5 space-y-8  font-extralight">
           <motion.p
             variants={fadeIn("up", "tween", 0.7, 0.7)}
             initial="hidden"
             whileInView="show"
-            className="text-lg"
+            className="text-md sm:text-lg xl:text-xl"
           >
             The new 42 mm Unico Split-Seconds Chronograph GMT Large Date model
             premiers the use of an innovative coloured Ceramic Gold.
@@ -41,7 +41,7 @@ const HublotWatch = () => {
             initial="hidden"
             whileInView="show"
             href="#"
-            className="text-sm tracking-wider discover-more "
+            className="discover-more text-xs sm:text-md xl:text-lg tracking-wider "
           >
             Discover more
           </motion.a>
@@ -49,7 +49,7 @@ const HublotWatch = () => {
       </div>
 
       {/* Image Section */}
-      <div className="grid grid-cols-2 gap-4 px-36">
+      <div className="grid grid-rows-2 lg:grid-cols-2 gap-4 lg:px-36 sm:px-10">
         <motion.div
           variants={fadeIn("right", "tween", 0.5, 0.5)}
           initial="hidden"
@@ -58,7 +58,7 @@ const HublotWatch = () => {
           <img
             src="https://cdn.thewatchpages.com/app/uploads/2024/04/23015435/hublot-square-big-bang-unico-magic-gold-821mx0130rx-4.jpeg"
             alt="Celebration Moment"
-            className="w-[25rem] h-[30rem]"
+            className="object-contain sm:object-cover w-full h-full lg:w-[25rem] lg:h-[30rem]"
           />
         </motion.div>
         <motion.div
@@ -71,7 +71,7 @@ const HublotWatch = () => {
             loop
             muted
             playsInline
-            className="object-cover w-[25rem] h-[30rem]"
+            className="object-contain sm:object-cover w-full h-full lg:w-[25rem] lg:h-[30rem]"
           >
             <source src={hublotWatch} type="video/mp4" />
             Your browser does not support the video tag.
