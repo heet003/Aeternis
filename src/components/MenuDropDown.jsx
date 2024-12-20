@@ -9,7 +9,6 @@ import {
   tiktok,
   pinterest,
 } from "../assets";
-import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 
 const MenuDropDown = () => {
@@ -79,29 +78,29 @@ const MenuDropDown = () => {
   ];
 
   return (
-    <div className="p-28 pt-48 overflow-y-scroll bg-white text-black h-screen z-10">
+    <div className="p-28 pt-48 overflow-x-hidden bg-white text-black h-screen">
       <div className="flex flex-col lg:flex-row gap-8 ">
         {/* Sidebar */}
-        <motion.div className="lg:w-1/5">
+        <div className="lg:w-1/5">
           {menuLinks.map((menu, index) => (
             <div key={index} className="mb-8">
               <h1 className="text-gray-500 text-xl mb-4">{menu.category}</h1>
               <ul className="space-y-2">
                 {menu.links.map((link, i) => (
-                  <motion.li
+                  <li
                     key={i}
                     className="text-black hover:text-gray-400 cursor-pointer"
                   >
                     {link}
-                  </motion.li>
+                  </li>
                 ))}
               </ul>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Stories Section */}
-        <motion.div className="lg:w-4/5">
+        <div className="lg:w-4/5">
           <h1 className="text-6xl font-light mb-10">
             Latest <br />
             <span className="italic">Stories</span>
@@ -118,7 +117,7 @@ const MenuDropDown = () => {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
 
       <footer className="py-4">

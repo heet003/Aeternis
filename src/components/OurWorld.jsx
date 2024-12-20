@@ -89,7 +89,7 @@ const OurWorld = () => {
 
   return (
     <>
-      <div className="p-28 pt-16 z-10"></div>
+      <div className="p-28 pt-16"></div>
       <motion.p
         variants={fadeInOpacity(0.2, 1)}
         initial="hidden"

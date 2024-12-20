@@ -88,7 +88,7 @@ const WatchesDropDown = () => {
 
   return (
     <>
-      <div className="dropdown-watches p-10 pt-[9.5rem] z-10"></div>
+      <div className="dropdown-watches p-10 pt-[9.5rem]"></div>
       <motion.h1
         variants={fadeInOpacity(0.2, 1)}
         initial="hidden"

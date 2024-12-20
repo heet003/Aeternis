@@ -30,7 +30,7 @@ const Loader = ({ isLoading, onComplete }) => {
   return (
     <div
       ref={loaderRef}
-      className="fixed inset-0 flex flex-col items-center justify-center bg-white z-50"
+      className="fixed inset-0 flex flex-col items-center justify-center bg-white z-[10000]"
     >
       <div
         className="absolute top-0 left-0 h-[4px] rounded-xl bg-black"

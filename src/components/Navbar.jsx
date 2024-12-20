@@ -29,6 +29,7 @@ const Navbar = () => {
       );
       setIsWorldOpen(false);
       setIsServiceOpen(false);
+      setIsMenu(false);
       setIsDropdownOpen(true);
       setNavbarColor("text-black");
     } else {
@@ -110,7 +111,7 @@ const Navbar = () => {
       gsap.fromTo(
         menuref.current,
         { height: 0, opacity: 0 },
-        { height: "auto", opacity: 1, duration: 0.5, ease: "power2.out" }
+        { height: "auto", opacity: 1, duration: 10, ease: "power2.out" }
       );
       setNavbarColor("text-black");
     } else {
@@ -134,10 +135,11 @@ const Navbar = () => {
       {/* Menu  */}
       <div
         ref={menuref}
-        className={`absolute w-full z-10 ${isMenu ? "visible" : "invisible"}`}
+        className={`absolute w-full bg-white text-black z-[100] ${
+          isMenu ? "visible" : "invisible"
+        }`}
         style={{
-          height: isDropdownOpen ? "auto" : "0",
-          overflow: "hidden",
+          height: "0px",
         }}
       >
         <MenuDropDown />
@@ -145,7 +147,7 @@ const Navbar = () => {
       {/* Watches Drop Down Menu  */}
       <div
         ref={dropdownRef}
-        className={`absolute w-full bg-white text-black z-10 overflow-hidden ${
+        className={`absolute w-full bg-white text-black z-[100] overflow-hidden ${
           isDropdownOpen ? "visible" : "invisible"
         }`}
         style={{ height: "0px" }}
@@ -155,7 +157,7 @@ const Navbar = () => {
       {/* Our World Menu  */}
       <div
         ref={worldref}
-        className={`absolute w-full bg-white text-black z-10 overflow-hidden ${
+        className={`absolute w-full bg-white text-black z-[100] overflow-hidden ${
           isWorldOpen ? "visible" : "invisible"
         }`}
         style={{ height: "0px" }}
@@ -165,7 +167,7 @@ const Navbar = () => {
       {/* Service Menu  */}
       <div
         ref={serviceRef}
-        className={`absolute w-full bg-white text-black z-10 overflow-hidden ${
+        className={`absolute w-full bg-white text-black z-[100] overflow-hidden ${
           isServiceOpen ? "visible" : "invisible"
         }`}
         style={{ height: "0px" }}
@@ -175,16 +177,17 @@ const Navbar = () => {
 
       {/* Navigation Bar  */}
       <nav
-        className={`w-[90%] mx-auto flex items-center justify-between py-12 px-6 ${navbarColor} z-20 ${
-          (isDropdownOpen || isWorldOpen || isMenu || isServiceOpen) &&
-          "bg-white text-black z-40 border-b-2 border-gray-200"
-        }`}
+        className={`z-[1000] w-[90%] mx-auto flex items-center justify-between py-12 px-6 ${navbarColor}
+        ${(isMenu || isServiceOpen || isWorldOpen || isDropdownOpen) && "z-[100000] bg-white"}`}
       >
         <div className="flex items-center justify-center xl:gap-6 lg:gap-4 font-medium">
+          {/* <CloseIcon
+                className={`w-[40px] h-[40px] text-black bg-black cursor-pointer`}
+              /> */}
           <button onClick={handleMenuDropDown} className={`cursor-pointer`}>
             {isMenu ? (
               <CloseIcon
-                className={`w-[40px] h-[40px] text-black bg-black cursor-pointer`}
+                className={`w-[40px] h-[40px] text-black cursor-pointer`}
               />
             ) : (
               <MenuIcon className={`w-[40px] h-[40px] cursor-pointer`} />
@@ -194,14 +197,16 @@ const Navbar = () => {
           {/* Left Links  */}
           <div
             className={`hidden lg:flex items-center justify-center xl:gap-14 lg:gap-5 xl:text-lg lg:text-md font-medium ${
-              isMenu && "hidden"
+              (isMenu || isDropdownOpen || isWorldOpen || isServiceOpen) &&
+              "hidden"
             }`}
           >
             <a
               onClick={handleWatchesClick}
               className={`hover:text-gray-400 tracking-wider cursor-pointer ${
                 isDropdownOpen && " underline"
-              }`}
+              }
+               ${isMenu && " hidden"}`}
             >
               Watches
             </a>
@@ -209,11 +214,16 @@ const Navbar = () => {
               onClick={handleWorldClick}
               className={`hover:text-gray-400 tracking-wider cursor-pointer ${
                 isWorldOpen && " underline"
-              }`}
+              }
+               ${isMenu && " hidden"}`}
             >
               Our World
             </a>
-            <a href="/" className="hover:text-gray-400 tracking-wider">
+            <a
+              href="/"
+              className={`hover:text-gray-400 tracking-wider
+             ${isMenu && " hidden"}`}
+            >
               Stories
             </a>
           </div>
@@ -234,19 +244,21 @@ const Navbar = () => {
         <div className="flex items-center xl:gap-6 lg:gap-4 md:gap-2 font-medium tracking-wider">
           {/* Links  */}
           <div
-            className={`lg:flex hidden items-center xl:gap-14 lg:gap-5 xl:text-lg lg:text-md ${
-              isMenu && "hidden"
-            }`}
+            className={`lg:flex hidden items-center xl:gap-14 lg:gap-5 xl:text-lg lg:text-md`}
           >
             <a
               onClick={handleServiceClick}
               className={`hover:text-gray-400 cursor-pointer ${
                 isServiceOpen && " underline"
-              }`}
+              }
+              ${isMenu && " hidden"}`}
             >
               Services
             </a>
-            <a href="/" className="hover:text-gray-400">
+            <a
+              href="/"
+              className={`hover:text-gray-400  ${isMenu && " hidden"}`}
+            >
               Boutiques
             </a>
           </div>
@@ -324,8 +336,8 @@ const MenuIcon = ({ className }) => (
 const CloseIcon = ({ className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    class={className}
     viewBox="0 0 50 50"
+    className={className}
     width="50px"
     height="50px"
   >

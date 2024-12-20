@@ -85,7 +85,7 @@ const Services = () => {
 
   return (
     <>
-      <div className="p-28 pt-20 z-10"></div>
+      <div className="p-28 pt-20"></div>
       <motion.p
         variants={fadeInOpacity(0.3, 1)}
         initial="hidden"

@@ -36,7 +36,7 @@ function App() {
     <>
       {/* Main Content */}
       <Router>
-        <div className="z-50 w-full h-full overflow-x-hidden">
+        <div className="w-full h-full overflow-x-hidden z-0">
           <Navbar />
           <Routes>
             <Route
@@ -75,7 +75,7 @@ function App() {
           loop
           muted
           playsInline
-          className="fixed top-0 left-0 w-full h-full object-cover -z-20"
+          className="fixed top-0 left-0 w-full h-full object-cover z-[-100]"
         >
           <source src={bg} type="video/mp4" />
           Your browser does not support the video tag.
