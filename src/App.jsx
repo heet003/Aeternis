@@ -36,7 +36,7 @@ function App() {
     <>
       {/* Main Content */}
       <Router>
-        <div className="z-10 w-full h-full overflow-x-hidden">
+        <div className="z-50 w-full h-full overflow-x-hidden">
           <Navbar />
           <Routes>
             <Route

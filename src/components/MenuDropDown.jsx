@@ -79,24 +79,16 @@ const MenuDropDown = () => {
   ];
 
   return (
-    <div className="p-28 pt-48 overflow-y-scroll h-screen z-10">
+    <div className="p-28 pt-48 overflow-y-scroll bg-white text-black h-screen z-10">
       <div className="flex flex-col lg:flex-row gap-8 ">
         {/* Sidebar */}
-        <motion.div
-          className="lg:w-1/5"
-          variants={fadeIn("up", "tween", 0.7, 0.5)}
-          initial="hidden"
-          whileInView="show"
-        >
+        <motion.div className="lg:w-1/5">
           {menuLinks.map((menu, index) => (
             <div key={index} className="mb-8">
               <h1 className="text-gray-500 text-xl mb-4">{menu.category}</h1>
               <ul className="space-y-2">
                 {menu.links.map((link, i) => (
                   <motion.li
-                    variants={fadeIn("up", "tween", 1, 1)}
-                    initial="hidden"
-                    whileInView="show"
                     key={i}
                     className="text-black hover:text-gray-400 cursor-pointer"
                   >
@@ -109,12 +101,7 @@ const MenuDropDown = () => {
         </motion.div>
 
         {/* Stories Section */}
-        <motion.div
-          className="lg:w-4/5"
-          variants={fadeIn("up", "tween", 1, 1)}
-          initial="hidden"
-          whileInView="show"
-        >
+        <motion.div className="lg:w-4/5">
           <h1 className="text-6xl font-light mb-10">
             Latest <br />
             <span className="italic">Stories</span>

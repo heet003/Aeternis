@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import WatchesDropDown from "./WatchesDropDown";
 import OurWorld from "./OurWorld";
 import { user } from "../assets";
-import MenuDropDown from "./menuDropDown";
+import MenuDropDown from "./MenuDropDown";
 import Services from "./Services";
 
 const Navbar = () => {
@@ -103,6 +103,7 @@ const Navbar = () => {
 
   const handleMenuDropDown = () => {
     if (!isMenu) {
+      setIsMenu(true);
       setIsDropdownOpen(false);
       setIsWorldOpen(false);
       setIsServiceOpen(false);
@@ -111,7 +112,6 @@ const Navbar = () => {
         { height: 0, opacity: 0 },
         { height: "auto", opacity: 1, duration: 0.5, ease: "power2.out" }
       );
-      setIsMenu(true);
       setNavbarColor("text-black");
     } else {
       gsap.fromTo(
@@ -134,10 +134,11 @@ const Navbar = () => {
       {/* Menu  */}
       <div
         ref={menuref}
-        className={`absolute w-full bg-white text-black z-10 ${
-          isMenu ? "visible" : "invisible"
-        }`}
-        style={{ height: "0px" }}
+        className={`absolute w-full z-10 ${isMenu ? "visible" : "invisible"}`}
+        style={{
+          height: isDropdownOpen ? "auto" : "0",
+          overflow: "hidden",
+        }}
       >
         <MenuDropDown />
       </div>
@@ -175,13 +176,16 @@ const Navbar = () => {
       {/* Navigation Bar  */}
       <nav
         className={`w-[90%] mx-auto flex items-center justify-between py-12 px-6 ${navbarColor} z-20 ${
-          (isDropdownOpen || isMenu || isServiceOpen) && "bg-white"
+          (isDropdownOpen || isWorldOpen || isMenu || isServiceOpen) &&
+          "bg-white text-black z-40 border-b-2 border-gray-200"
         }`}
       >
         <div className="flex items-center justify-center xl:gap-6 lg:gap-4 font-medium">
           <button onClick={handleMenuDropDown} className={`cursor-pointer`}>
             {isMenu ? (
-              <CloseIcon className={`w-[40px] h-[40px] cursor-pointer`} />
+              <CloseIcon
+                className={`w-[40px] h-[40px] text-black bg-black cursor-pointer`}
+              />
             ) : (
               <MenuIcon className={`w-[40px] h-[40px] cursor-pointer`} />
             )}
