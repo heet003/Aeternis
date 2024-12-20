@@ -10,11 +10,17 @@ import {
   tiktok,
   pinterest,
 } from "../assets";
+import { fadeInOpacity, fadeIn } from "../utils/motion";
 
 function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-[#0C3428] text-white py-10 px-8">
+    <motion.footer
+      variants={fadeIn("left", "tween", 0.5, 0.3)}
+      initial="hidden"
+      whileInView="show"
+      className="bg-[#0C3428] text-white py-10 px-8 overflow-x-hidden"
+    >
       {/* Top Section */}
       <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
         {/* Logos Section */}
@@ -122,7 +128,7 @@ function Footer() {
         {/* Copyright */}
         <p className="text-sm">© {year} HUBLOT</p>
       </div>
-    </footer>
+    </motion.footer>
   );
 }
 
