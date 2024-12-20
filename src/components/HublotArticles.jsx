@@ -1,11 +1,17 @@
 /*eslint-disable */
 import React from "react";
 import { motion } from "framer-motion";
+import { fadeInOpacity, fadeIn } from "../utils/motion";
 
 function HublotArticles() {
   return (
     <div className="bg-black  py-40 p-20 w-full overflow-x-hidden">
-      <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+      <motion.div
+        variants={fadeInOpacity(0.3, 0.5)}
+        initial="hidden"
+        whileInView="show"
+        className="flex flex-col lg:flex-row items-center lg:items-start gap-8"
+      >
         {/* Image Section */}
         <div className="w-full lg:w-3/5 flex justify-center">
           <img
@@ -17,32 +23,65 @@ function HublotArticles() {
 
         {/* Text Content Section */}
         <div className="w-full lg:w-2/5 text-white tracking-tighter px-6">
-          <p className="text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl lightHeading">
+          <motion.p
+            variants={fadeIn("up", "tween", 0.5, 0.5)}
+            initial="hidden"
+            whileInView="show"
+            className="text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl lightHeading"
+          >
             HUBLOT
-          </p>
-          <p className="text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl lightHeading">
+          </motion.p>
+          <motion.p
+            variants={fadeIn("up", "tween", 0.6, 0.5)}
+            initial="hidden"
+            whileInView="show"
+            className="text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl lightHeading"
+          >
             CHRONICLES:
-          </p>
-          <p className="italic timesfonts text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl">
-          DIVE 
-          </p>
-          <p className="italic timesfonts text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl">
+          </motion.p>
+          <motion.p
+            variants={fadeIn("up", "tween", 0.7, 0.5)}
+            initial="hidden"
+            whileInView="show"
+            className="italic timesfonts text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl"
+          >
+            DIVE
+          </motion.p>
+          <motion.p
+            variants={fadeIn("up", "tween", 0.8, 0.5)}
+            initial="hidden"
+            whileInView="show"
+            className="italic timesfonts text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl"
+          >
             INTO
-          </p>
-          <p className="italic timesfonts text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl">
+          </motion.p>
+          <motion.p
+            variants={fadeIn("up", "tween", 0.9, 0.5)}
+            initial="hidden"
+            whileInView="show"
+            className="italic timesfonts text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl"
+          >
             HUBLOT'S
-          </p>
-          <p className="italic timesfonts text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl">
+          </motion.p>
+          <motion.p
+            variants={fadeIn("up", "tween", 1, 0.5)}
+            initial="hidden"
+            whileInView="show"
+            className="italic timesfonts text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl"
+          >
             HISTORY
-          </p>
+          </motion.p>
           <span className="block mt-8 mb-8 font-extralight text-sm sm:text-base md:text-md lg:text-lg xl:text-xl tracking-normal">
-          Travel back in time and immerse yourself into Hublot's universe through enriched articles, technical sheets of models and calibres as well as exclusive anecdotes and archival footages uncovered by our Heritage team.
+            Travel back in time and immerse yourself into Hublot's universe
+            through enriched articles, technical sheets of models and calibres
+            as well as exclusive anecdotes and archival footages uncovered by
+            our Heritage team.
           </span>
           <a className="discover-more cursor-pointer text-sm sm:text-base md:text-md lg:text-lg xl:text-xl">
             Explore Hublot's Chronicles
           </a>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

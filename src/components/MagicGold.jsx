@@ -6,7 +6,7 @@ function MagicGold() {
   return (
     <div className="bg-black py-40 p-20 w-full overflow-x-hidden">
       <motion.div
-        variants={fadeInOpacity(0.5, 0.5)}
+        variants={fadeInOpacity(0.3, 0.5)}
         initial="hidden"
         whileInView="show"
         className="flex flex-col lg:flex-row items-center lg:items-start gap-8"
@@ -54,7 +54,7 @@ function MagicGold() {
           >
             'COMPANION'
           </motion.p>
-          <motion.span
+          <span
             variants={fadeIn("up", "tween", 0.5, 0.5)}
             initial="hidden"
             whileInView="show"
@@ -62,7 +62,7 @@ function MagicGold() {
           >
             The new 42 mm Unico Split-Seconds Chronograph GMT Large Date model
             premiers the use of an innovative coloured Ceramic Gold.
-          </motion.span>
+          </span>
         </div>
       </motion.div>
     </div>

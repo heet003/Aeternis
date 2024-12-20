@@ -101,7 +101,7 @@ function Podcast() {
             HUBLOT FUSION <span className="timesfonts italic">PODCAST</span>
           </motion.h1>
           <p
-            variants={fadeIn("up", "tween", 0.5, 0.8)}
+            variants={fadeIn("up", "tween", 0.5, 0.6)}
             initial="hidden"
             whileInView="show"
             className="text-lg md:text-[1rem] px-2 pr-10"
@@ -115,7 +115,7 @@ function Podcast() {
 
         {/* Image Slider */}
         <motion.div
-          variants={fadeInOpacity(0.5, 0.5)}
+          variants={fadeInOpacity(0.3, 0.5)}
           initial="hidden"
           whileInView="show"
           className="xl:w-2/3 w-full"

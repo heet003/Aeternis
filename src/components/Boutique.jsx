@@ -1,11 +1,17 @@
 /* eslint-disable */
 import React from "react";
 import { motion } from "framer-motion";
+import { fadeInOpacity, fadeIn } from "../utils/motion";
 
 function Boutique() {
   return (
     <div className="bg-white text-black py-40 px-20 w-full overflow-x-hidden">
-      <div className="flex flex-col lg:flex-row items-center lg:items-center gap-8">
+      <motion.div
+        variants={fadeInOpacity(0.3, 0.5)}
+        initial="hidden"
+        whileInView="show"
+        className="flex flex-col lg:flex-row items-center lg:items-center gap-8"
+      >
         {/* Image Section */}
         <div className="w-full lg:w-3/5 flex justify-center">
           <img
@@ -17,12 +23,22 @@ function Boutique() {
 
         {/* Text Content Section */}
         <div className="w-full lg:w-2/5 flex flex-col justify-center items-center lg:items-start text-center lg:text-left px-6">
-          <p className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl lightHeading">
+          <motion.p
+            variants={fadeIn("up", "tween", 0.5, 0.5)}
+            initial="hidden"
+            whileInView="show"
+            className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl lightHeading"
+          >
             FIND A
-          </p>
-          <p className="italic timesfonts text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+          </motion.p>
+          <motion.p
+            variants={fadeIn("up", "tween", 0.6, 0.5)}
+            initial="hidden"
+            whileInView="show"
+            className="italic timesfonts text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
+          >
             BOUTIQUE
-          </p>
+          </motion.p>
           <a
             href="#"
             className="discover-more-black cursor-pointer mt-4 text-sm sm:text-base md:text-lg lg:text-xl"
@@ -30,7 +46,7 @@ function Boutique() {
             Explore All Boutiques
           </a>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

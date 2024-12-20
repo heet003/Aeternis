@@ -1,11 +1,17 @@
 /*eslint-disable */
 import React from "react";
 import { motion } from "framer-motion";
+import { fadeInOpacity, fadeIn } from "../utils/motion";
 
 function Heritage() {
   return (
     <div className="bg-black  py-40 p-20 w-full overflow-x-hidden">
-      <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+      <motion.div
+        variants={fadeInOpacity(0.3, 0.5)}
+        initial="hidden"
+        whileInView="show"
+        className="flex flex-col lg:flex-row items-center lg:items-start gap-8"
+      >
         {/* Image Section */}
         <div className="w-full lg:w-3/5 flex justify-center">
           <img
@@ -17,23 +23,40 @@ function Heritage() {
 
         {/* Text Content Section */}
         <div className="w-full lg:w-2/5 text-white tracking-tighter px-6">
-          <p className="text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl lightHeading">
+          <motion.p
+            variants={fadeIn("up", "tween", 0.5, 0.5)}
+            initial="hidden"
+            whileInView="show"
+            className="text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl lightHeading"
+          >
             Musée
-          </p>
-          <p className="text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl lightHeading">
-            Atelier 
-          </p>
-          <p className="italic timesfonts text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl">
+          </motion.p>
+          <motion.p
+            variants={fadeIn("up", "tween", 0.6, 0.5)}
+            initial="hidden"
+            whileInView="show"
+            className="text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl lightHeading"
+          >
+            Atelier
+          </motion.p>
+          <motion.p
+            variants={fadeIn("up", "tween", 0.7, 0.5)}
+            initial="hidden"
+            whileInView="show"
+            className="italic timesfonts text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl"
+          >
             HUBLOT
-          </p>
+          </motion.p>
           <span className="block mt-8 mb-8 font-extralight text-sm sm:text-base md:text-md lg:text-lg xl:text-xl tracking-normal">
-          Experience our heritage, craftsmanship and connection to the world in the Musée Atelier Hublot which pays tribute to the craftspeople who have made what Hublot is today, generation after generation.
+            Experience our heritage, craftsmanship and connection to the world
+            in the Musée Atelier Hublot which pays tribute to the craftspeople
+            who have made what Hublot is today, generation after generation.
           </span>
           <a className="discover-more cursor-pointer text-sm sm:text-base md:text-md lg:text-lg xl:text-xl">
             Discover more
           </a>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
