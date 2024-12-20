@@ -58,7 +58,7 @@ const HublotWatch = () => {
           <img
             src="https://cdn.thewatchpages.com/app/uploads/2024/04/23015435/hublot-square-big-bang-unico-magic-gold-821mx0130rx-4.jpeg"
             alt="Celebration Moment"
-            className="object-contain sm:object-cover w-full h-full lg:w-[25rem] lg:h-[30rem]"
+            className="object-contain sm:object-cover w-full h-full lg:w-[25rem] lg:h-auto"
           />
         </motion.div>
         <motion.div
@@ -71,7 +71,7 @@ const HublotWatch = () => {
             loop
             muted
             playsInline
-            className="object-contain sm:object-cover w-full h-full lg:w-[25rem] lg:h-[30rem]"
+            className="object-contain sm:object-cover w-full h-full lg:w-[25rem] lg:h-auto"
           >
             <source src={hublotWatch} type="video/mp4" />
             Your browser does not support the video tag.
