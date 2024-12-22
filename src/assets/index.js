@@ -1,4 +1,6 @@
 import menu from "./menu.svg";
+import filter from "./filter.png";
+import compare from "./compare.png";
 import close from "./close.svg";
 import H from "./H.svg";
 import left from "./left-arrow.svg";
@@ -19,6 +21,8 @@ import youtube from "./youtube.svg";
 
 export {
   menu,
+  filter,
+  compare,
   bg,
   user,
   watch,

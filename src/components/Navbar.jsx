@@ -229,7 +229,7 @@ const Navbar = ({ bgColor }) => {
               Our World
             </a>
             <a
-              href="/"
+              href="/stories"
               className={`hover:text-gray-400 tracking-wider
              ${isMenu && " hidden"}`}
             >
@@ -271,7 +271,7 @@ const Navbar = ({ bgColor }) => {
               Services
             </a>
             <a
-              href="/"
+              href="/findus"
               className={`hover:text-gray-400  ${isMenu && " hidden"}`}
             >
               Boutiques
@@ -291,16 +291,19 @@ const Navbar = ({ bgColor }) => {
               }
             />
           </Link>
-          <WatchIcon
-            className={
-              isDropdownOpen ||
-              isMenu ||
-              isServiceOpen ||
-              isWorldOpen ||
-              bgColor ? "#000000"
-                : "#ffffff"
-            }
-          />
+          <Link to='/watches' >
+            <WatchIcon
+              className={
+                isDropdownOpen ||
+                isMenu ||
+                isServiceOpen ||
+                isWorldOpen ||
+                bgColor
+                  ? "#000000"
+                  : "#ffffff"
+              }
+            />
+          </Link>
         </div>
         {/* Mobile Menu */}
         {toggle && (

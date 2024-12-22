@@ -25,8 +25,11 @@ import Warranty from "./components/Warranty";
 import Boutique from "./components/BOUTIQUE";
 import Newsletter from "./components/Newsletter";
 import Footer from "./components/Footer";
+import Stories from "./components/Stories";
 import Login from "./components/Login";
 import CreateAccount from "./components/CreateAccount";
+import FindUs from "./components/FindUs";
+import Collection from "./components/Collection";
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -77,6 +80,9 @@ function App() {
                 </>
               }
             />
+            <Route path="/watches" element={<Collection />} />
+            <Route path="/stories" element={<Stories />} />
+            <Route path="/findus" element={<FindUs />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signin" element={<CreateAccount />} />
             <Route path="*" element={<Navigate to="/" />} />
