@@ -16,10 +16,10 @@ function Footer() {
   const year = new Date().getFullYear();
   return (
     <motion.footer
-      variants={fadeIn("left", "tween", 0.5, 0.3)}
+      variants={fadeInOpacity(0.2, 0.4)}
       initial="hidden"
       whileInView="show"
-      className="bg-[#0C3428] text-white py-10 px-8 overflow-x-hidden"
+      className="bg-[#0C3428] text-white py-10 px-8 w-full overflow-x-hidden"
     >
       {/* Top Section */}
       <div className="flex flex-col lg:flex-row items-center justify-between gap-8">

@@ -8,7 +8,7 @@ import { user } from "../assets";
 import MenuDropDown from "./MenuDropDown";
 import Services from "./Services";
 
-const Navbar = () => {
+const Navbar = ({ bgColor }) => {
   const [toggle, setToggle] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isWorldOpen, setIsWorldOpen] = useState(false);
@@ -27,6 +27,7 @@ const Navbar = () => {
         { height: 0, opacity: 0 },
         { height: "auto", opacity: 1, duration: 0.5, ease: "power2.out" }
       );
+
       setIsWorldOpen(false);
       setIsServiceOpen(false);
       setIsMenu(false);
@@ -82,6 +83,7 @@ const Navbar = () => {
         { height: 0, opacity: 0 },
         { height: "auto", opacity: 1, duration: 0.5, ease: "power2.out" }
       );
+
       setIsDropdownOpen(false);
       setIsServiceOpen(false);
       setIsWorldOpen(true);
@@ -111,7 +113,7 @@ const Navbar = () => {
       gsap.fromTo(
         menuref.current,
         { height: 0, opacity: 0 },
-        { height: "auto", opacity: 1, duration: 10, ease: "power2.out" }
+        { height: "auto", opacity: 1, duration: 1, ease: "power2.out" }
       );
       setNavbarColor("text-black");
     } else {
@@ -135,7 +137,7 @@ const Navbar = () => {
       {/* Menu  */}
       <div
         ref={menuref}
-        className={`absolute w-full bg-white text-black z-[100] ${
+        className={`absolute w-full bg-white text-black overflow-x-hidden -z-[10]   ${
           isMenu ? "visible" : "invisible"
         }`}
         style={{
@@ -147,7 +149,7 @@ const Navbar = () => {
       {/* Watches Drop Down Menu  */}
       <div
         ref={dropdownRef}
-        className={`absolute w-full bg-white text-black z-[100] overflow-hidden ${
+        className={`absolute w-full bg-white text-black overflow-x-hidden -z-[10] ${
           isDropdownOpen ? "visible" : "invisible"
         }`}
         style={{ height: "0px" }}
@@ -157,7 +159,7 @@ const Navbar = () => {
       {/* Our World Menu  */}
       <div
         ref={worldref}
-        className={`absolute w-full bg-white text-black z-[100] overflow-hidden ${
+        className={`absolute w-full bg-white text-black overflow-x-hidden -z-[10]  ${
           isWorldOpen ? "visible" : "invisible"
         }`}
         style={{ height: "0px" }}
@@ -167,7 +169,7 @@ const Navbar = () => {
       {/* Service Menu  */}
       <div
         ref={serviceRef}
-        className={`absolute w-full bg-white text-black z-[100] overflow-hidden ${
+        className={`absolute w-full bg-white text-black overflow-x-hidden -z-[10]  ${
           isServiceOpen ? "visible" : "invisible"
         }`}
         style={{ height: "0px" }}
@@ -177,8 +179,11 @@ const Navbar = () => {
 
       {/* Navigation Bar  */}
       <nav
-        className={`z-[1000] w-[90%] mx-auto flex items-center justify-between py-12 px-6 ${navbarColor}
-        ${(isMenu || isServiceOpen || isWorldOpen || isDropdownOpen) && "z-[100000] bg-white"}`}
+        className={`z-[1000] flex items-center justify-between py-12 px-5 sm:px-20 ${navbarColor}
+        ${
+          (isMenu || isServiceOpen || isWorldOpen || isDropdownOpen) &&
+          "z-[1001] bg-white"
+        } ${bgColor && "bg-white"}`}
       >
         <div className="flex items-center justify-center xl:gap-6 lg:gap-4 font-medium">
           {/* <CloseIcon
@@ -190,7 +195,11 @@ const Navbar = () => {
                 className={`w-[40px] h-[40px] text-black cursor-pointer`}
               />
             ) : (
-              <MenuIcon className={`w-[40px] h-[40px] cursor-pointer`} />
+              <MenuIcon
+                className={`w-[40px] h-[40px] cursor-pointer ${
+                  bgColor && "text-black"
+                }`}
+              />
             )}
           </button>
 
@@ -199,7 +208,7 @@ const Navbar = () => {
             className={`hidden lg:flex items-center justify-center xl:gap-14 lg:gap-5 xl:text-lg lg:text-md font-medium ${
               (isMenu || isDropdownOpen || isWorldOpen || isServiceOpen) &&
               "hidden"
-            }`}
+            } ${bgColor && "text-black"}`}
           >
             <a
               onClick={handleWatchesClick}
@@ -233,7 +242,11 @@ const Navbar = () => {
         <Link to={`/`}>
           <LogoIcon
             className={
-              isDropdownOpen || isMenu || isServiceOpen || isWorldOpen
+              isDropdownOpen ||
+              isMenu ||
+              isServiceOpen ||
+              isWorldOpen ||
+              bgColor
                 ? "#000000"
                 : "#ffffff"
             }
@@ -244,7 +257,9 @@ const Navbar = () => {
         <div className="flex items-center xl:gap-6 lg:gap-4 md:gap-2 font-medium tracking-wider">
           {/* Links  */}
           <div
-            className={`lg:flex hidden items-center xl:gap-14 lg:gap-5 xl:text-lg lg:text-md`}
+            className={`lg:flex hidden items-center xl:gap-14 lg:gap-5 xl:text-lg lg:text-md ${
+              bgColor && "text-black"
+            }`}
           >
             <a
               onClick={handleServiceClick}
@@ -263,17 +278,26 @@ const Navbar = () => {
             </a>
           </div>
           {/* User and watch Icon  */}
-          <UserIcon
-            className={
-              isDropdownOpen || isMenu || isServiceOpen || isWorldOpen
-                ? "#000000"
-                : "#ffffff"
-            }
-          />
+          <Link to="/login">
+            <UserIcon
+              className={
+                isDropdownOpen ||
+                isMenu ||
+                isServiceOpen ||
+                isWorldOpen ||
+                bgColor
+                  ? "#000000"
+                  : "#ffffff"
+              }
+            />
+          </Link>
           <WatchIcon
             className={
-              isDropdownOpen || isMenu || isServiceOpen || isWorldOpen
-                ? "#000000"
+              isDropdownOpen ||
+              isMenu ||
+              isServiceOpen ||
+              isWorldOpen ||
+              bgColor ? "#000000"
                 : "#ffffff"
             }
           />

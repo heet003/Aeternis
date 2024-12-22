@@ -4,8 +4,7 @@
 
 @font-face {
   font-family: "Helvetica";
-  src: url("./assets/Helvetica Neue LT Com 77 Bold Condensed.ttf")
-    format("truetype");
+  src: url("./assets/Helvetica Neue LT Com 77 Bold Condensed.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,6 +15,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 
 body {
   margin: 0;

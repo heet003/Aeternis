@@ -1,9 +1,10 @@
 /* eslint-disable */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
+  useLocation,
   Navigate,
 } from "react-router-dom";
 
@@ -24,20 +25,37 @@ import Warranty from "./components/Warranty";
 import Boutique from "./components/BOUTIQUE";
 import Newsletter from "./components/Newsletter";
 import Footer from "./components/Footer";
+import Login from "./components/Login";
+import CreateAccount from "./components/CreateAccount";
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
+  const [navbarClass, setNavbarClass] = useState(false);
 
   const handleLoaderComplete = () => {
     setIsLoading(false);
   };
 
+  const DynamicNavbar = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+      if (location.pathname === "/") {
+        setNavbarClass(false);
+      } else {
+        setNavbarClass(true);
+      }
+    }, [location]);
+
+    return <Navbar bgColor={navbarClass} />;
+  };
   return (
     <>
       {/* Main Content */}
       <Router>
-        <div className="w-full h-full overflow-x-hidden z-0">
-          <Navbar />
+        <div className="w-full h-full overflow-x-hidden z-[-100]">
+          {/* <Navbar /> */}
+          <DynamicNavbar />
           <Routes>
             <Route
               path="/"
@@ -59,6 +77,8 @@ function App() {
                 </>
               }
             />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signin" element={<CreateAccount />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
           <Footer />
@@ -75,7 +95,7 @@ function App() {
           loop
           muted
           playsInline
-          className="fixed top-0 left-0 w-full h-full object-cover z-[-100]"
+          className="fixed top-0 left-0 w-full h-full object-cover z-[-1000]"
         >
           <source src={bg} type="video/mp4" />
           Your browser does not support the video tag.

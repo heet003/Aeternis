@@ -4,9 +4,12 @@ import { fadeIn } from "../utils/motion";
 import { motion } from "framer-motion";
 
 function Hero() {
+
   return (
     <>
-      <div className="relative min-h-screen w-full p-5 text-white ">
+      <div
+        className={`relative min-h-screen w-full p-5 text-white`}
+      >
         {/* Left Side - Text */}
         <motion.div
           variants={fadeIn("up", "tween", 0.5, 1)}
