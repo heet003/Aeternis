@@ -11,6 +11,7 @@ import greeting from "./greeting.mp4";
 import user from "./user.svg";
 import watch from "./watch.svg";
 
+// Social Icons Black
 import instagram from "./instagram.svg";
 import facebook from "./facebook.svg";
 import linkedin from "./linkedin.svg";
@@ -18,6 +19,15 @@ import pinterest from "./pinterest.svg";
 import tiktok from "./tiktok.svg";
 import twitter from "./twitter.svg";
 import youtube from "./youtube.svg";
+
+// Social Icons White
+import facebookWhite from "./facebook-white.svg";
+import instagramWhite from "./instagramWhite.svg";
+import linkedinWhite from "./linkedinWhite.svg";
+import pinterestWhite from "./pinterestWhite.svg";
+import tiktokWhite from "./tiktokWhite.svg";
+import twitterxWhite from "./twitterxWhite.svg";
+import youtubeWhite from "./youtubeWhite.svg";
 
 export {
   menu,
@@ -39,4 +49,11 @@ export {
   pinterest,
   greeting,
   hublotWatch,
+  facebookWhite,
+  instagramWhite,
+  youtubeWhite,
+  twitterxWhite,
+  pinterestWhite,
+  linkedinWhite,
+  tiktokWhite,
 };

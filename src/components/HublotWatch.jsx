@@ -15,15 +15,15 @@ const HublotWatch = () => {
           whileInView="show"
           className="text-4xl sm:text-5xl lg:text-6xl lightHeading tracking-tighter uppercase"
         >
-          Square Bang
+          Eterna Chrono
           <br />
           <motion.span
             variants={fadeIn("up", "tween", 0.6, 0.6)}
             initial="hidden"
             whileInView="show"
-            className="timesfonts italic"
+            className="timesfonts italic uppercase"
           >
-            Unico Ceramic Magic Gold
+            Ceramic Sapphire Radiance
           </motion.span>
         </motion.h1>
         <div className="sm:px-28 px-5 space-y-8  font-extralight">
@@ -33,8 +33,10 @@ const HublotWatch = () => {
             whileInView="show"
             className="text-md sm:text-lg xl:text-xl"
           >
-            The new 42 mm Unico Split-Seconds Chronograph GMT Large Date model
-            premiers the use of an innovative coloured Ceramic Gold.
+            Introducing the 42 mm Ceramic Sapphire Radiance, a masterpiece that
+            combines advanced craftsmanship with a bold and innovative ceramic
+            sapphire design. Perfectly blending precision and elegance, it sets
+            a new benchmark in luxury timepieces.
           </motion.p>
           <motion.a
             variants={fadeIn("up", "tween", 0.8, 0.8)}
@@ -43,7 +45,7 @@ const HublotWatch = () => {
             href="#"
             className="discover-more text-xs sm:text-md xl:text-lg tracking-wider "
           >
-            Discover more
+            Explore the Collection
           </motion.a>
         </div>
       </div>

@@ -12,32 +12,32 @@ function WatchShowcase() {
   const images = [
     {
       url: "https://images.unsplash.com/photo-1689287428096-7e1dcc705a5c?q=80&w=1922&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      name: "Royal Oak Concept Tourbillon “COMPANION” limited edition.",
-      desc: 'The 43 mm titanium Royal Oak Concept Tourbillon "COMPANION" limited edition reinterprets Haute Horlogerie through the lens of artist KAWS.',
+      name: "Aeternis Orion Tourbillon",
+      desc: "The Orion Tourbillon redefines elegance with its 43mm titanium casing, blending modern art with the mastery of fine watchmaking.",
       link: "/",
     },
     {
       url: "https://images.unsplash.com/photo-1700471299386-7a84be5cd423?q=80&w=1952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      name: "Chronext Precision Chronograph Limited Series",
-      desc: "An innovative chronograph that pushes boundaries, designed for collectors seeking timeless precision and refined craftsmanship.",
+      name: "Aeternis Precision Chronograph",
+      desc: "A bold chronograph with unparalleled precision, crafted for those who seek the perfect blend of luxury and functionality.",
       link: "/",
     },
     {
       url: "https://images.unsplash.com/photo-1725246164929-7e12379619be?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      name: "Kapoor Watch 821.OX Elite Collection",
-      desc: "The Kapoor 821.OX introduces cutting-edge titanium construction paired with an elegant aesthetic, redefining luxury for true connoisseurs.",
+      name: "Aeternis Lumina Elite",
+      desc: "The Lumina Elite pairs cutting-edge materials with a luminous design, offering timeless sophistication for discerning collectors.",
       link: "/",
     },
     {
       url: "https://images.unsplash.com/photo-1666661827195-61a865184d03?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      name: "Luxury Timepiece Noire Édition",
-      desc: "The Noire Édition features a bold yet understated design, combining a dark aesthetic with meticulous Swiss watchmaking excellence.",
+      name: "Aeternis Noire Édition",
+      desc: "Featuring a sleek black design with intricate detailing, the Noire Édition showcases Swiss craftsmanship at its finest.",
       link: "/",
     },
     {
       url: "https://images.unsplash.com/photo-1609335464321-0152690ff3dd?q=80&w=2014&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      name: "Kapoor Watch 821.NX Masterpiece Sapphire Edition",
-      desc: "A harmonious blend of artistry and innovation, the 821.NX Masterpiece Sapphire Edition embodies the epitome of contemporary watch design.",
+      name: "Aeternis Sapphire Crown",
+      desc: "With a striking sapphire dial and innovative design, the Sapphire Crown represents the pinnacle of contemporary watchmaking.",
       link: "/",
     },
   ];

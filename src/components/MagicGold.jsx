@@ -28,7 +28,7 @@ function MagicGold() {
             whileInView="show"
             className="text-4xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl lightHeading"
           >
-            AP x KAWS
+            INNOVATION
           </motion.p>
           <motion.p
             variants={fadeIn("up", "tween", 0.5, 0.5)}
@@ -36,7 +36,7 @@ function MagicGold() {
             whileInView="show"
             className="italic timesfonts text-4xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl"
           >
-            WELCOMES
+            MEETS
           </motion.p>
           <motion.p
             variants={fadeIn("up", "tween", 0.5, 0.5)}
@@ -44,15 +44,7 @@ function MagicGold() {
             whileInView="show"
             className="italic timesfonts text-4xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl"
           >
-            A
-          </motion.p>
-          <motion.p
-            variants={fadeIn("up", "tween", 0.5, 0.5)}
-            initial="hidden"
-            whileInView="show"
-            className="italic timesfonts text-4xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl"
-          >
-            'COMPANION'
+            TRADITION
           </motion.p>
           <span
             variants={fadeIn("up", "tween", 0.5, 0.5)}
@@ -60,8 +52,9 @@ function MagicGold() {
             whileInView="show"
             className="block mt-8 font-extralight text-xs sm:text-base md:text-md lg:text-lg xl:text-xl tracking-normal"
           >
-            The new 42 mm Unico Split-Seconds Chronograph GMT Large Date model
-            premiers the use of an innovative coloured Ceramic Gold.
+            The latest 42 mm timepiece combines cutting-edge design with a
+            unique material to create a watch that defines luxury and
+            innovation.
           </span>
         </div>
       </motion.div>

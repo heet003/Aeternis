@@ -29,7 +29,7 @@ function HublotArticles() {
             whileInView="show"
             className="text-4xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl lightHeading"
           >
-            HUBLOT
+            LEGENDARY
           </motion.p>
           <motion.p
             variants={fadeIn("up", "tween", 0.6, 0.5)}
@@ -37,7 +37,7 @@ function HublotArticles() {
             whileInView="show"
             className="text-4xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl lightHeading"
           >
-            CHRONICLES:
+            TIMEPIECES:
           </motion.p>
           <motion.p
             variants={fadeIn("up", "tween", 0.7, 0.5)}
@@ -45,7 +45,7 @@ function HublotArticles() {
             whileInView="show"
             className="italic timesfonts text-4xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl"
           >
-            DIVE
+            JOURNEY
           </motion.p>
           <motion.p
             variants={fadeIn("up", "tween", 0.8, 0.5)}
@@ -53,7 +53,7 @@ function HublotArticles() {
             whileInView="show"
             className="italic timesfonts text-4xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl"
           >
-            INTO
+            THROUGH
           </motion.p>
           <motion.p
             variants={fadeIn("up", "tween", 0.9, 0.5)}
@@ -61,7 +61,7 @@ function HublotArticles() {
             whileInView="show"
             className="italic timesfonts text-4xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl"
           >
-            HUBLOT'S
+            TIMELESS
           </motion.p>
           <motion.p
             variants={fadeIn("up", "tween", 1, 0.5)}
@@ -69,16 +69,13 @@ function HublotArticles() {
             whileInView="show"
             className="italic timesfonts text-4xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl"
           >
-            HISTORY
+            CRAFT
           </motion.p>
           <span className="block mt-8 font-extralight text-xs sm:text-base md:text-md lg:text-lg xl:text-xl tracking-normal">
-            Travel back in time and immerse yourself into Hublot's universe
-            through enriched articles, technical sheets of models and calibres
-            as well as exclusive anecdotes and archival footages uncovered by
-            our Heritage team.
+          Immerse yourself in the rich legacy of watchmaking craftsmanship. Delve into fascinating stories, in-depth timepiece specifications, and exclusive insights brought to life through expert narration and rare archival content.
           </span>
           <a className="discover-more cursor-pointer text-sm sm:text-base md:text-md lg:text-lg xl:text-xl">
-            Explore Hublot's Chronicles
+            Explore 
           </a>
         </div>
       </motion.div>

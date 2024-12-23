@@ -29,7 +29,7 @@ function Heritage() {
             whileInView="show"
             className="text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl lightHeading"
           >
-            Musée
+            THE
           </motion.p>
           <motion.p
             variants={fadeIn("up", "tween", 0.6, 0.5)}
@@ -37,23 +37,24 @@ function Heritage() {
             whileInView="show"
             className="text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl lightHeading"
           >
-            Atelier
+            LEGACY
           </motion.p>
           <motion.p
             variants={fadeIn("up", "tween", 0.7, 0.5)}
             initial="hidden"
             whileInView="show"
-            className="italic timesfonts text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl"
+            className="uppercase italic timesfonts text-4xl sm:text-[2rem] md:text-4xl lg:text-5xl xl:text-6xl"
           >
-            HUBLOT
+            OF Aeternis
           </motion.p>
           <span className="block mt-8 mb-8 font-extralight text-sm sm:text-base md:text-md lg:text-lg xl:text-xl tracking-normal">
-            Experience our heritage, craftsmanship and connection to the world
-            in the Musée Atelier Hublot which pays tribute to the craftspeople
-            who have made what Hublot is today, generation after generation.
+            Step into the world of Aeternis, where time is not just measured,
+            but celebrated. Our ateliers preserve a legacy of exceptional
+            craftsmanship, blending tradition with innovation to create timeless
+            masterpieces that stand as symbols of elegance and precision.
           </span>
           <a className="discover-more cursor-pointer text-sm sm:text-base md:text-md lg:text-lg xl:text-xl">
-            Discover more
+            Explore our Legacy
           </a>
         </div>
       </motion.div>

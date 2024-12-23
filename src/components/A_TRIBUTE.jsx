@@ -27,9 +27,9 @@ function A_TRIBUTE() {
             variants={fadeIn("up", "tween", 0.5, 0.5)}
             initial="hidden"
             whileInView="show"
-            className="text-3xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl lightHeading"
+            className="text-3xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl lightHeading uppercase"
           >
-            [RE]MASTER02,
+            Masterpiece
           </motion.p>
           <motion.p
             variants={fadeIn("up", "tween", 0.6, 0.5)}
@@ -37,23 +37,7 @@ function A_TRIBUTE() {
             whileInView="show"
             className="italic timesfonts text-3xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl"
           >
-            A
-          </motion.p>
-          <motion.p
-            variants={fadeIn("up", "tween", 0.7, 0.5)}
-            initial="hidden"
-            whileInView="show"
-            className="italic timesfonts text-3xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl"
-          >
-            TRIBUTE
-          </motion.p>
-          <motion.p
-            variants={fadeIn("up", "tween", 0.8, 0.5)}
-            initial="hidden"
-            whileInView="show"
-            className="italic timesfonts text-3xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl"
-          >
-            TO
+            OF
           </motion.p>
           <motion.p
             variants={fadeIn("up", "tween", 0.9, 0.5)}
@@ -61,12 +45,14 @@ function A_TRIBUTE() {
             whileInView="show"
             className="italic timesfonts text-3xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl"
           >
-            BRUTALISM
+            PRECISION
           </motion.p>
           <span className="block mt-10 font-extralight text-sm sm:text-base md:text-md lg:text-lg xl:text-xl tracking-normal">
-            This new limited edition features an asymmetrical 41 mm rectangular
-            case in the new 18-carat sand gold alloy and is equipped with the
-            Calibre 7129.
+            A bold tribute to architectural artistry, this 42mm timepiece
+            features a striking angular case crafted from premium 18-carat grey
+            titanium alloy. Powered by the advanced Calibre 7129 movement, it
+            merges intricate design with cutting-edge technology, embodying the
+            perfect fusion of modern engineering and timeless craftsmanship.
           </span>
           <a className="discover-more cursor-pointer text-sm sm:text-base md:text-md lg:text-lg xl:text-xl">
             Discover more

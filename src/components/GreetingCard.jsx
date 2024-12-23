@@ -22,7 +22,7 @@ const GreetingCard = () => {
             whileInView="show"
             className="timesfonts italic"
           >
-            From Le Brassus
+            From Us
           </motion.span>
         </motion.h1>
         <div className="sm:px-28 px-5 space-y-8 font-extralight">
@@ -33,7 +33,7 @@ const GreetingCard = () => {
             className="text-md sm:text-lg xl:text-xl"
           >
             This year, our team let their imaginations run wild for our upcoming
-            150 years celebration and let's just say, things got creative!
+            milestone celebration, and let's just say, things got creative!
           </motion.p>
           <motion.a
             variants={fadeIn("up", "tween", 0.8, 0.8)}

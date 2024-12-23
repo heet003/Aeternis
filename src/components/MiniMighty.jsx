@@ -27,22 +27,24 @@ function MiniMighty() {
             variants={fadeIn("up", "tween", 0.5, 0.5)}
             initial="hidden"
             whileInView="show"
-            className="text-4xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl lightHeading"
+            className="text-4xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl lightHeading uppercase"
           >
-            MINI YET
+            sleek yet
           </motion.p>
           <motion.p
             variants={fadeIn("up", "tween", 0.5, 0.5)}
             initial="hidden"
             whileInView="show"
-            className="italic timesfonts text-4xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl"
+            className="italic timesfonts text-4xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl uppercase"
           >
-            MIGHTY
+            enduring
           </motion.p>
           <span className="block mt-8 font-extralight text-xs sm:text-base md:text-md lg:text-lg xl:text-xl tracking-normal">
-            A glowing come back for the mighty Mini Royal Oak, offered for the
-            first time in a 23 mm diameter and executed in a choice of 18-carat
-            yellow, white or pink Frosted gold.
+            Presenting the Aeternis Mini, a stunning 23mm timepiece that
+            combines strength and sophistication. Available in 18-carat Yellow,
+            White, or Pink Frosted Gold, this bold design proves that great
+            things come in small packages, offering unmatched luxury in every
+            detail.
           </span>
           <a className="discover-more cursor-pointer text-sm sm:text-base md:text-md lg:text-lg xl:text-xl">
             Discover more

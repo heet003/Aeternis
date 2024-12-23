@@ -27,9 +27,9 @@ function Warranty() {
             variants={fadeIn("up", "tween", 0.5, 0.5)}
             initial="hidden"
             whileInView="show"
-            className="text-3xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl lightHeading"
+            className=" uppercase text-3xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl lightHeading"
           >
-            HUBLOT
+            Aeternis
           </motion.p>
           <motion.p
             variants={fadeIn("up", "tween", 0.6, 0.5)}
@@ -43,14 +43,15 @@ function Warranty() {
             variants={fadeIn("up", "tween", 0.7, 0.5)}
             initial="hidden"
             whileInView="show"
-            className="italic timesfonts text-3xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl"
+            className="uppercase italic timesfonts text-3xl sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl"
           >
-            SERVICE
+            Protection
           </motion.p>
           <span className="block mt-10 font-extralight text-sm sm:text-base md:text-md lg:text-lg xl:text-xl tracking-normal">
-            The Hublot Coverage Service is a 2-year complimentary service
-            protecting Hublot watches from burglary and robbery as well as
-            functional damage.
+            Aeternis Coverage offers a 2-year complimentary service that
+            safeguards your timepiece against theft, loss, and functional
+            damage, ensuring your watch stays as pristine as the day you
+            received it.
           </span>
           <a className="discover-more cursor-pointer text-sm sm:text-base md:text-md lg:text-lg xl:text-xl">
             Discover more

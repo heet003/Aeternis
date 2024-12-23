@@ -12,20 +12,20 @@ function Podcast() {
   const images = [
     {
       url: "https://aynnymcmgq.cloudimg.io/v7/image.ausha.co/ELAOYBkaPeQIDEqXkBJ4lTdAzmwRVoeY0duBDtQd_1400x1400.jpeg?t=1622127692&width=400",
-      name: "Hublot Fusion Talks: The Art of Time",
-      desc: "An exploration of how Hublot integrates innovation and artistry to redefine luxury watchmaking.",
+      name: "Fusion Talks: The Art of Time",
+      desc: "An exploration of how our brand integrates innovation and artistry to redefine luxury watchmaking.",
       link: "/",
     },
     {
       url: "https://aynnymcmgq.cloudimg.io/v7/image.ausha.co/emV6DDM70qHsCDx6zYiLQPnOxlXWxidUsy9pE6cG_1400x1400.jpeg?t=1623776163&width=400",
-      name: "Hublot Chronicles: Timeless Precision",
-      desc: "Dive into the world of Hublot, where tradition meets modern craftsmanship to create iconic timepieces.",
+      name: "Chronicles: Timeless Precision",
+      desc: "Dive into the world of our brand, where tradition meets modern craftsmanship to create iconic timepieces.",
       link: "/",
     },
     {
       url: "https://aynnymcmgq.cloudimg.io/v7/image.ausha.co/R3CbbP4oL7RRwEqLc7S57Gy17IiliqWZ8LCGnGfv_1400x1400.jpeg?t=1625748232&width=400",
-      name: "Hublot Visionaries: Redefining Luxury",
-      desc: "A podcast celebrating Hublot's groundbreaking designs and the visionaries behind them.",
+      name: "Visionaries: Redefining Luxury",
+      desc: "A podcast celebrating our brand's groundbreaking designs and the visionaries behind them.",
       link: "/",
     },
   ];
@@ -98,7 +98,7 @@ function Podcast() {
             whileInView="show"
             className="text-3xl lightHeading tracking-tighter md:text-5xl xl:text-[4rem]"
           >
-            HUBLOT FUSION <span className="timesfonts italic">PODCAST</span>
+            FUSION <span className="timesfonts italic">PODCAST</span>
           </motion.h1>
           <p
             variants={fadeIn("up", "tween", 0.5, 0.6)}
@@ -106,10 +106,10 @@ function Podcast() {
             whileInView="show"
             className="text-md font-extralight md:text-lg lg:text-xl px-2 pr-10"
           >
-            Discover the third episode of the Fusion Podcast, a series of
-            conversations presenting Hublot's craftsmanship, heritage
-            and cultural universe through the eyes of Hublot's experts
-            and special guests.
+            Explore the third episode of the Fusion Podcast, where we delve into
+            the art of watchmaking, uncovering our brand's craftsmanship,
+            legacy, and cultural influence through insightful discussions with
+            our experts and special guests.
           </p>
         </div>
 

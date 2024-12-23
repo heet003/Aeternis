@@ -2,13 +2,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  instagram,
-  facebook,
-  twitter,
-  linkedin,
-  youtube,
-  tiktok,
-  pinterest,
+  instagramWhite,
+  facebookWhite,
+  twitterxWhite,
+  linkedinWhite,
+  youtubeWhite,
+  tiktokWhite,
+  pinterestWhite,
 } from "../assets";
 import { fadeInOpacity, fadeIn } from "../utils/motion";
 
@@ -25,22 +25,23 @@ function Footer() {
       <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
         {/* Logos Section */}
         <div className="flex flex-col lg:flex-row mx-auto items-center gap-6">
-          <p className="text-xl font-light italic">Hublot CHRONICLES</p>
-          <svg
-            width="70px"
-            height="70px"
-            viewBox="0 0 128 128"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            role="img"
-            className="iconify iconify--noto"
-            preserveAspectRatio="xMidYMid meet"
-          >
-            <path
-              d="M109.48 16.34H84.84c-1.28 0-2.33 1.04-2.33 2.33v36.27H45.5V18.68c0-1.29-1.04-2.33-2.34-2.33H18.53a2.34 2.34 0 0 0-2.34 2.33v99.96c0 1.29 1.05 2.33 2.34 2.33h24.63a2.34 2.34 0 0 0 2.34-2.33V76.15h37.02v42.48c0 1.29 1.05 2.33 2.33 2.33h24.64c1.29 0 2.33-1.05 2.33-2.33V18.68a2.35 2.35 0 0 0-2.34-2.34z"
-              fill="#ffffff"
-            ></path>
+          <p className="text-xl font-light italic uppercase">
+            Aeternis CHRONICLES
+          </p>
+          <svg height="50" width="200" xmlns="http://www.w3.org/2000/svg">
+            <text
+              x="10"
+              y="40"
+              fill="white"
+              font-family="Arial, sans-serif"
+              font-size="40"
+              letter-spacing="2"
+              text-shadow="2px 2px 4px rgba(0, 0, 0, 0.8)"
+            >
+              Aeternis
+            </text>
           </svg>
+
           <p className="text-xl font-light">FOUNDATIONS</p>
         </div>
       </div>
@@ -53,37 +54,55 @@ function Footer() {
         <div>
           <h3 className="uppercase text-sm font-semibold">Watches</h3>
           <ul className="mt-2 space-y-1 text-sm lightHeading">
-            <li>All Watches</li>
-            <li>Our Collections</li>
-            <li>New Releases</li>
-            <li>Find a Boutique</li>
+            <li className="cursor-pointer hover:text-slate-400">All Watches</li>
+            <li className="cursor-pointer hover:text-slate-400">
+              Our Collections
+            </li>
+            <li className="cursor-pointer hover:text-slate-400">
+              New Releases
+            </li>
+            <li className="cursor-pointer hover:text-slate-400">
+              Find a Boutique
+            </li>
           </ul>
         </div>
         <div>
           <h3 className="uppercase text-sm font-semibold">Our World</h3>
           <ul className="mt-2 space-y-1 text-sm lightHeading">
-            <li>Born in Le Brassus</li>
-            <li>Musée Atelier</li>
-            <li>Hublot Chronicles</li>
-            <li>Stay connected</li>
+            <li className="cursor-pointer hover:text-slate-400">
+              Born in Elegance
+            </li>
+            <li className="cursor-pointer hover:text-slate-400">
+              Crafting the Future
+            </li>
+            <li className="cursor-pointer hover:text-slate-400">
+              Aeternis Chronicles
+            </li>
+            <li className="cursor-pointer hover:text-slate-400">
+              Stay connected
+            </li>
           </ul>
         </div>
         <div>
           <h3 className="uppercase text-sm font-semibold">Services</h3>
           <ul className="mt-2 space-y-1 text-sm lightHeading">
-            <li>Maintenance Services</li>
-            <li>Extend your warranty</li>
-            <li>Contact us</li>
-            <li>FAQ</li>
+            <li className="cursor-pointer hover:text-slate-400">
+              Maintenance Services
+            </li>
+            <li className="cursor-pointer hover:text-slate-400">
+              Extend your warranty
+            </li>
+            <li className="cursor-pointer hover:text-slate-400">Contact us</li>
+            <li className="cursor-pointer hover:text-slate-400">FAQ</li>
           </ul>
         </div>
         <div>
           <h3 className="uppercase text-sm font-semibold">Company</h3>
           <ul className="mt-2 space-y-1 text-sm lightHeading">
-            <li>Careers</li>
-            <li>Press</li>
-            <li>Foundation</li>
-            <li>Commitments</li>
+            <li className="cursor-pointer hover:text-slate-400">Careers</li>
+            <li className="cursor-pointer hover:text-slate-400">Press</li>
+            <li className="cursor-pointer hover:text-slate-400">Foundation</li>
+            <li className="cursor-pointer hover:text-slate-400">Commitments</li>
           </ul>
         </div>
       </div>
@@ -95,38 +114,49 @@ function Footer() {
         {/* Social Media Icons */}
         <div className="flex gap-4">
           <a href="#" className="">
-            <img src={instagram} alt="instagram" />
+            <img src={instagramWhite} alt="instagram" className="" />
           </a>
           <a href="#" className="">
-            <img src={facebook} alt="facebook" />
+            <img src={facebookWhite} alt="facebook" className="" />
+          </a>
+
+          <a href="#" className="">
+            <img src={twitterxWhite} alt="twitter" className="" />
           </a>
           <a href="#" className="">
-            <img src={twitter} alt="twitter" />
+            <img src={tiktokWhite} alt="tiktok" className="" />
           </a>
           <a href="#" className="">
-            <img src={tiktok} alt="tiktok" />
+            <img src={pinterestWhite} alt="pinterest" className="" />
           </a>
           <a href="#" className="">
-            <img src={pinterest} alt="pinterest" />
+            <img src={youtubeWhite} alt="youtube" className="" />
           </a>
           <a href="#" className="">
-            <img src={youtube} alt="youtube" />
-          </a>
-          <a href="#" className="">
-            <img src={linkedin} alt="linkedin" />
+            <img src={linkedinWhite} alt="linkedin" className="" />
           </a>
         </div>
 
         {/* Links */}
-        <div className="flex flex-col lg:flex-row gap-4 text-sm">
-          <a href="#">Terms of Use</a>
-          <a href="#">Privacy Notice</a>
-          <a href="#">Cookie Policy</a>
-          <a href="#">Accessibility</a>
+        <div className="flex flex-col lg:flex-row gap-4 text-sm lightHeading">
+          <a href="/" className="hover:text-slate-400 cursor-pointer">
+            Terms of Use
+          </a>
+          <a href="/" className="hover:text-slate-400 cursor-pointer">
+            Privacy Notice
+          </a>
+          <a href="/" className="hover:text-slate-400 cursor-pointer">
+            Cookie Policy
+          </a>
+          <a href="/" className="hover:text-slate-400 cursor-pointer">
+            Accessibility
+          </a>
         </div>
 
         {/* Copyright */}
-        <p className="text-sm">© {year} HUBLOT</p>
+        <p className="text-sm lightHeading">
+          © {year} Aeternis. All Rights Reserved.
+        </p>
       </div>
     </motion.footer>
   );
