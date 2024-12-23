@@ -1,8 +1,28 @@
-# React + Vite
+# Aeternis
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aeternis is a modern, sleek, and interactive web application built using **React.js**, **Vite**, and **Tailwind CSS**. The project features smooth loading animations, a minimalist design, and responsive layouts to provide users with an engaging and intuitive experience.
 
-Currently, two official plugins are available:
+## Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can check out the live demo of the project [here](#).
+
+## Technologies Used
+
+- **React.js** - A JavaScript library for building user interfaces.
+- **Vite** - A build tool that provides fast and optimized development and production builds.
+- **Tailwind CSS** - A utility-first CSS framework for quickly building custom designs.
+
+## Features
+
+- 🎨 **Interactive UI** with smooth transitions
+- ⚡ **Optimized performance** with **Vite**
+- 🖥️ **Responsive design** to ensure a seamless experience across devices
+- ⏳ **Custom loader animation** to enhance user experience during loading
+
+## Installation
+
+To run the project locally, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/heet003/Aeternis.git
