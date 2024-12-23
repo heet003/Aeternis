@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import WatchesDropDown from "./WatchesDropDown";
 import OurWorld from "./OurWorld";
-import { user } from "../assets";
 import MenuDropDown from "./MenuDropDown";
 import Services from "./Services";
 
@@ -291,7 +290,7 @@ const Navbar = ({ bgColor }) => {
               }
             />
           </Link>
-          <Link to='/watches' >
+          <Link to="/watches">
             <WatchIcon
               className={
                 isDropdownOpen ||
@@ -331,21 +330,19 @@ const Navbar = ({ bgColor }) => {
 };
 
 const LogoIcon = ({ className }) => (
-  <svg
-    width="80px"
-    height="80px"
-    viewBox="0 0 128 128"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    aria-hidden="true"
-    role="img"
-    class="iconify iconify--noto"
-    preserveAspectRatio="xMidYMid meet"
-  >
-    <path
-      d="M109.48 16.34H84.84c-1.28 0-2.33 1.04-2.33 2.33v36.27H45.5V18.68c0-1.29-1.04-2.33-2.34-2.33H18.53a2.34 2.34 0 0 0-2.34 2.33v99.96c0 1.29 1.05 2.33 2.34 2.33h24.63a2.34 2.34 0 0 0 2.34-2.33V76.15h37.02v42.48c0 1.29 1.05 2.33 2.33 2.33h24.64c1.29 0 2.33-1.05 2.33-2.33V18.68a2.35 2.35 0 0 0-2.34-2.34z"
+  <svg height="50" width="auto" xmlns="http://www.w3.org/2000/svg">
+    <text
+      x="10"
+      y="40"
       fill={className}
-    ></path>
+      font-family="Arial, sans-serif"
+      font-size="40"
+      fontWeight="bold"
+      letter-spacing="2"
+      text-shadow="2px 2px 4px rgba(0, 0, 0, 0.8)"
+    >
+      AETERNIS
+    </text>
   </svg>
 );
 

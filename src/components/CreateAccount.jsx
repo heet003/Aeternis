@@ -11,7 +11,7 @@ function CreateAccount() {
   return (
     <>
       {/* Main Container */}
-      <div className="px-8 md:px-16 lg:px-44 py-10 bg-white text-black space-y-10">
+      <div className="px-8 md:px-16 lg:px-44 py-10 bg-white text-black space-y-10 -z-20">
         {/* Header Section */}
         <div className="space-y-4">
           <h1 className="lightHeading text-3xl md:text-5xl uppercase w-full lg:w-1/3">

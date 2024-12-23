@@ -32,7 +32,7 @@ import FindUs from "./components/FindUs";
 import Collection from "./components/Collection";
 
 function App() {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [navbarClass, setNavbarClass] = useState(false);
 
   const handleLoaderComplete = () => {

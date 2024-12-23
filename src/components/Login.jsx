@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Login() {
   return (
-    <div className="bg-white bg-opacity-100 text-black p-5 lg:px-20 flex flex-col lg:flex-row space-y-10 lg:space-y-0">
+    <div className="bg-white bg-opacity-100 text-black p-5 lg:px-20 flex flex-col lg:flex-row space-y-10 lg:space-y-0 -z-20">
       {/* Login Section */}
       <div className="flex flex-col space-y-6 p-5 lg:p-10 lg:pr-32 w-full lg:w-1/2">
         <h1 className="lightHeading text-3xl lg:text-4xl">LOG IN</h1>

@@ -1,4 +1,4 @@
-/* eslint-disable */
+/*eslint-disable */
 import React, { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 import { H } from "../assets";
@@ -30,16 +30,50 @@ const Loader = ({ isLoading, onComplete }) => {
   return (
     <div
       ref={loaderRef}
-      className="fixed inset-0 flex flex-col items-center justify-center bg-white z-[10000]"
+      className="fixed inset-0 flex items-center justify-center bg-white z-[10000]"
     >
+      {/* Progress bar */}
       <div
         className="absolute top-0 left-0 h-[4px] rounded-xl bg-black"
         style={{ width: `${progress}%` }}
       ></div>
 
-      <img src={H} alt="logo" />
+      {/* Centered Logo */}
+      <div>
+        <LogoIcon className="#000000" />
+      </div>
     </div>
   );
 };
+
+const LogoIcon = ({ className }) => (
+  <svg height="50" width="auto" xmlns="http://www.w3.org/2000/svg">
+    <text
+      x="10"
+      y="40"
+      fill="black"
+      fontFamily="Arial, sans-serif"
+      fontSize="40"
+      fontWeight="bold"
+      letterSpacing="2"
+      textShadow="none"
+      style={{ textShadow: "2px 2px 2px rgba(0, 0, 0, 0.8)" }}
+    >
+      AETERNIS
+    </text>
+
+    <text
+      x="10"
+      y="40"
+      fill={className}
+      fontFamily="Arial, sans-serif"
+      fontSize="40"
+      fontWeight="bold"
+      letterSpacing="2"
+    >
+      AETERNIS
+    </text>
+  </svg>
+);
 
 export default Loader;

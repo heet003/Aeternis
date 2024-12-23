@@ -36,7 +36,7 @@ const Collection = () => {
   }, {});
 
   return (
-    <div className="p-6 sm:px-10 lg:px-20 xl:px-32 bg-white text-black">
+    <div className="p-6 sm:px-10 lg:px-20 xl:px-32 bg-white text-black -z-20">
       {/* Search and Filter Section */}
       <div className="flex flex-col md:flex-row items-center justify-between mb-6">
         <input

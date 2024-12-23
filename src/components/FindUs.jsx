@@ -5,7 +5,7 @@ import "leaflet/dist/leaflet.css"; // Import Leaflet CSS
 
 const FindUs = () => {
   return (
-    <div className="bg-white text-black w-full min-h-screen flex flex-col-reverse md:flex-row lg:px-16 xl:px-32">
+    <div className="bg-white text-black w-full min-h-screen flex flex-col-reverse md:flex-row lg:px-16 xl:px-32 -z-20">
       {/* Header Section */}
       <div className="py-10 px-4 md:w-1/2 md:px-8 flex flex-col justify-center">
         <h1
