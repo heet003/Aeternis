@@ -57,7 +57,7 @@ const LogoIcon = ({ className }) => (
       fontWeight="bold"
       letterSpacing="2"
       textShadow="none"
-      style={{ textShadow: "2px 2px 2px rgba(0, 0, 0, 0.8)" }}
+      style={{ textShadow: "1.5px 1.5px 1.5px rgba(0, 0, 0, 0.8)" }}
     >
       AETERNIS
     </text>
